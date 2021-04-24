@@ -89,7 +89,76 @@ For Admin:
 - A clear and simple means of adding and/or editing cocktail recipe categories.
 
 ### **Structure**
-#### Page
+The structure of the site varies slightly depending on who the user is. All users will see the same fixed navigation bar, with some differing page options, and footer across the site. The colour and design is also consistent across all pages of the site.
+
+#### Navigation Bar
+- For All Users:
+    - Will contain clear names of each site page for navigation ease; Home, Recipes (which is a dropdown item with links to the different cocktail categories), Register and Log In.
+    - Will contain the site logo which acts as a link to the *Home* page.
+    - Will remain consistent throughout the site.
+    - Will turn into a collapsible menu on smaller devices for a cleaner design.
+
+- For Registered Users (when logged in):
+    - Will contain clear names of each site page for navigation ease; Home, Recipes (which is a dropdown item with links to the different cocktail categories), New Recipe, Profile and Log Out.
+
+- For Admin (when logged in):
+    - Will contain clear names of each site page for navigation ease; Home, Recipes (which is a dropdown item with links to the different cocktail categories), New Recipe, Categories, Profile and Log Out.
+
+#### Footer
+- Will remain consistent throughout the site.
+- Will contain links to various social media platforms.
+    - As the site owner does not yet have social media accounts, these links will bring the user to the main social media platform rather than to a particular account.
+- Will contain a link which brings the user to a contact form if they wish to contact the site owner ("Contact Us Here!").
+
+#### Home Page
+- This page will be the same for all users, content-wise, whether they are a member or not.
+- A quick introduction to the site will be provided.
+- A *search bar* will be available, allowing users to search for a particular cocktail or ingredient, including a *button* to clear their search and another to perform the search.
+- A link to all cocktail recipes will be clearly displayed.
+- A link inviting first-time users/non-members to create an account will be clearly displayed, which also tells them what extra features they can use by being a member (*"Create an Account to add and edit your own recipes"*).
+
+#### Recipes Page
+- A *search bar* will be available, allowing users to search for a particular cocktail or ingredient, including a *button* to clear their search and another to perform the search.
+- Will contain card panels of each cocktail category (*Vodka, Gin, Rum, Whiskey, Tequila, Variety* and *Non-Alcoholic*).
+- Upon clicking a particular card panel, *Rum* for example, the user will be brought to all cocktails in the *Rum* category.
+    - A *search bar* will be available, allowing users to search for a particular cocktail or ingredient, including a *button* to clear their search and another to perform the search.
+    - A link will be clearly available allowing the user to return to all categories.
+    - Each cocktail recipe will be available as a clickable card panel with its name and image clearly seen. 
+    - Any cocktail recipe uploaded by the logged in user will have *buttons* to *Edit* and/or *Delete* the recipe.
+
+#### Register Page
+- Will contain a form to be filled out to register with fields for *Username*, *Email*, *Password* and a *Submit* button.
+- Will contain a link to the *Log In* page for users who are already registered ("Already Registered? Log In Here").
+
+#### Log In Page
+- Will contain a form to be filled out to log in with fields for *Username*, *Password* and a *Submit* button.
+- Will contain a link to the *Register* page for users who have not yet made an account ("Don't Have An Account? Register Here").
+
+#### Profile Page
+- Will only be available to Registered Users.
+- Will display the user's Name and Username.
+- Will display their own uploaded cocktail recipes.
+
+#### New Recipe Page
+- Will only be available to Registered Users.
+- Will contain a form to be filled out to complete the cocktail recipe with fields for *Name*, *Choose Main Alcohol* (dropdown selector), *Ingredients, Steps*, *Image URL* and a *Submit* button.
+
+#### Categories Page
+- Will only be available to Admin.
+- Will display all current cocktail recipe categories.
+- Will contain buttons for *Edit* and *Delete* of each category.
+- Will contain a button to *Add New Category*.
+
+#### New Category Page
+- Will only be available to Admin.
+- Will contain a form to be filled out to add the new category with fields for *Category Name*, *Image URL* and a *Submit* button.
+
+#### Contact Page
+- Will be accessible via a link in the footer across all site pages.
+- Will contain a contact form for the user to fill out with fields for *Name*, *Email Address*, *Your Message* and a *Submit* button.
+- Once the form is submitted, the user will receive an automated reply to the email address that they entered to confirm their message has been received.
+- Will contain links to various social media platforms.
+    - As the site owner does not yet have social media accounts, these links will bring the user to the main social media platform rather than to a particular account.
 
 ### **Skeleton**
 All wireframes were created using [Balsamiq](https://balsamiq.com/).
