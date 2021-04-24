@@ -19,7 +19,7 @@ body {
 .navbar {
     padding: .5rem;
     background-color: #08060E;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .navbar-brand {
@@ -30,9 +30,59 @@ body {
     color: #FFFCF7;
     letter-spacing: .2rem;
 }
+.nav-link:hover {
+    color: #82ECF7;
+}
+
 .nav-item .active {
     font-weight: 600;
 }
-.nav-link:hover {
+
+.navbar-toggler-icon {
     color: #FFFCF7;
+    font-size: 1rem;
+    padding-right: .5rem;
+}
+
+.navbar-collapse {
+    padding-top: .5rem;
+    text-align: center;
+}
+
+.dropdown-menu {
+    background-color: #08060E;
+    text-align: center;
+}
+.dropdown-item {
+    color: #FFFCF7;
+    font-weight: 200;
+}
+hr {
+    color: #FFFCF7;
+}
+
+/*-------------------------Footer----------------------- */
+.footer-section {
+    background-color: #08060E;
+    color: #FFFCF7;
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    font-size: .8rem;
+}
+
+.footer-section a {
+    color: #FFFCF7;
+    text-decoration: none;
+}
+
+.footer-section a i {
+    color: #FFFCF7;
+    font-size: 1.7rem;
+    padding: 1rem 1.5rem;
+    border: none;
+}
+
+.footer-copyright {
+    text-align: left;
+    font-weight: 200;
 }
