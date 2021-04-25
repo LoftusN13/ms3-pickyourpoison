@@ -39,7 +39,7 @@ def register():
         # alert user if username is already taken/exists
         if existing_user:
             flash("Sorry, this username is already taken! Try another one!")
-            return redirect(url_for("register.html"))
+            return redirect(url_for("register"))
 
         # takes the user's form info and inserts it into mongo users db
         new_user = {
