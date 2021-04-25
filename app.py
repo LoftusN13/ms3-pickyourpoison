@@ -51,6 +51,8 @@ def register():
         # alert user that registration is successful
         session["user"] = request.form.get("username").lower()
         flash("Registration Complete! Welcome!")
+        # bring user to their profile after successful login
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
 
@@ -72,7 +74,11 @@ def login():
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     # alert user to successful login
-                    flash("Welcome, {}!".format(request.form.get("username")))
+                    flash("Welcome, {}!".format(
+                        request.form.get("username")))
+                    # bring user to their profile after successful login
+                    return redirect(url_for(
+                        "profile", username=session["user"]))
             # password does not match for that user
             else:
                 # alert user to unsuccessful login
@@ -87,7 +93,7 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods("GET", "POST")
+@app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     """
     Profile page; current session user's username
