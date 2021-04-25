@@ -49,7 +49,7 @@
                         <!-- links only available to logged in users -->
                         {% if session.user %}
                             <li class="nav-item">
-                                <a class="nav-link" href="">New Recipe</a>
+                                <a class="nav-link" href="{{ url_for('new_cocktail') }}">New Recipe</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
