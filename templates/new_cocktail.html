@@ -15,9 +15,8 @@
 
                         <!-- choose main alcohol selection menu -->
                         <div class="mb-3">
-                            <select class="form-select" name="category_name" id="category_name" 
-                            aria-label="Main Alcohol Selection" required>
-                                <option selected>Choose Main Alcohol...</option>
+                            <select class="form-select" name="category_name" id="category_name" aria-label="Main Alcohol Selection" required>
+                                <option value="" selected disabled>Choose Main Alcohol...</option>
                                 {% for category in categories %}
                                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                                 {% endfor %}
@@ -28,15 +27,13 @@
                         <div class="mb-3">
                             <label for="cocktail_ingredients">Ingredients</label><br>
                             <textarea name="cocktail_ingredients" id="cocktail_ingredients" class="form-control" 
-                            rows="4" required>
-                                                    </textarea>
+                            rows="4" required></textarea>
                         </div>
 
                         <!-- steps text area -->
                         <div class="mb-3">
                             <label for="cocktail_steps">Steps</label><br>
-                            <textarea name="cocktail_steps" id="cocktail_steps" class="form-control" rows="4" required>
-                                                    </textarea>
+                            <textarea name="cocktail_steps" id="cocktail_steps" class="form-control" rows="4" required></textarea>
                         </div>
 
                         <!-- cocktail imgage url input -->
