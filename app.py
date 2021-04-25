@@ -21,8 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    recipes = mongo.db.recipes.find()
-    return render_template("base.html", recipes=recipes)
+    return render_template("index.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -122,6 +121,12 @@ def logout():
     session.pop("user")
     # redirect user to Log In page
     return redirect(url_for("login"))
+
+
+@app.route("/get_cocktails")
+def get_cocktails():
+    recipes = mongo.db.recipes.find()
+    return render_template("cocktails.html", recipes=recipes)
 
 
 if __name__ == "__main__":
