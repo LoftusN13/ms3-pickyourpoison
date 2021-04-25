@@ -46,24 +46,29 @@
                                 <li><a class="dropdown-item" href="#">Non-Alcoholic</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">New Recipe</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('register') }}">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
-                        </li>
+                        <!-- links only available to logged in users -->
+                        {% if session.user %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="">New Recipe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+                            </li>
+                        <!-- links only available to logged out users -->
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
