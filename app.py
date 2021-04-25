@@ -125,8 +125,20 @@ def logout():
 
 @app.route("/get_cocktails")
 def get_cocktails():
+    # pulls recipe data from db
     recipes = mongo.db.recipes.find()
     return render_template("cocktails.html", recipes=recipes)
+
+
+@app.route("/new_cocktail")
+def new_cocktail():
+    """
+    New Recipe Page; registered user can create
+    a new cocktail recipe.
+    Alcohol categories pulled from db for select menu
+    """
+    categories = mongo.db.categories.find()
+    return render_template("new_cocktail.html", categories=categories)
 
 
 if __name__ == "__main__":
