@@ -30,9 +30,28 @@ def register():
     """
     Registration page; users can create an account
     by entering a username and password.
-    Username will be checked to see if it
-    already exists.
     """
+    if request.method == "POST":
+        # see if username is already taken/exists
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        # alert user if username is already taken/exists
+        if existing_user:
+            flash("Sorry, this username is already taken! Try another one!")
+            return redirect(url_for("register.html"))
+
+        # takes the user's form info and inserts it into mongo users db
+        new_user = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(new_user)
+
+        # alert user that registration is successful
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Complete! Welcome!")
+
     return render_template("register.html")
 
 
