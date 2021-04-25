@@ -59,9 +59,27 @@
         <!-- End of NAVBAR -->
     </header>
 
+    <!-- FLASH MESSAGES -->
+    <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flash-message">
+                        <div class="alert alert-primary" role="alert">
+                            {{ message }}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <!-- End of FLASH MESSAGES -->
+
+    <main>
     {% block content %}
     <h1>This is where main content will go</h1>
     {% endblock %}
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer-section container-fluid">
