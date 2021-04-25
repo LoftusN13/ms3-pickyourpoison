@@ -130,13 +130,27 @@ def get_cocktails():
     return render_template("cocktails.html", recipes=recipes)
 
 
-@app.route("/new_cocktail")
+@app.route("/new_cocktail", methods=["GET", "POST"])
 def new_cocktail():
     """
     New Recipe Page; registered user can create
-    a new cocktail recipe.
-    Alcohol categories pulled from db for select menu
+    a new cocktail recipe. When the user submits
+    the new recipe form, the recipe will be
+    added to the db
     """
+    if request.method == "POST":
+        cocktail = {
+            "category_name": request.form.get("category_name"),
+            "cocktail_name": request.form.get("cocktail_name"),
+            "cocktail_ingredients": request.form.get("cocktail_ingredients"),
+            "cocktail_steps": request.form.get("cocktail_steps"),
+            "cocktail_img_url": request.form.get("cocktail_image_url"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.insert_one(cocktail)
+        # Alert user to successful recipe added
+        flash("Amazing! Another delicious cocktail added!")
+    # Alcohol categories pulled from db for select menu
     categories = mongo.db.categories.find()
     return render_template("new_cocktail.html", categories=categories)
 
