@@ -12,8 +12,8 @@
                     <div class="mb-3">
                         <i class="fas fa-user-plus"></i>
                         <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" name="username" id="username"
-                            aria-describedby="username-help">
+                        <input type="text" class="form-control" name="username" id="username" aria-describedby="username-help"
+                            minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" required>
                         <div id="username-help" class="form-text">
                             Choose a username between 5-15 alphanumerical characters.
                         </div>
@@ -22,9 +22,10 @@
                     <div class="mb-3">
                         <i class="fas fa-lock"></i>
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" aria-describedby="password-help">
+                        <input type="password" class="form-control" name="password" id="password" aria-describedby="password-help"
+                            minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" required>
                         <div id="username-help" class="form-text">
-                            Password must be.</div>
+                            Password must be between 5-15 characters. Alphanumerical only.</div>
                         </div>
                     <!-- registration submit button -->
                     <button type="submit" class="btn btn-primary">Register</button>
