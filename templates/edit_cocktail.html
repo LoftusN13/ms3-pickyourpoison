@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+        <!-- NEW COCKTAIL CARD PANEL -->
+        <div class="row justify-content-center">
+            <div class="card col-10">
+                <div class="card-body">
+                    <h2 class="card-title">Edit Cocktail Recipe</h2>
+                    <form method="POST" action="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}">
+                        <!-- cocktail name field -->
+                        <div class="mb-3">
+                            <label for="cocktail_name">Cocktail Name</label>
+                            <input type="text" class="form-control" name="cocktail_name" id="cocktail_name" 
+                            minlength="3" maxlength="30" required>
+                        </div>
+
+                        <!-- choose main alcohol selection menu -->
+                        <div class="mb-3">
+                            <select class="form-select" name="category_name" id="category_name" aria-label="Main Alcohol Selection" required>
+                                <option value="" selected disabled>Choose Main Alcohol...</option>
+                                {% for category in categories %}
+                                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <!-- ingredients text area -->
+                        <div class="mb-3">
+                            <label for="cocktail_ingredients">Ingredients</label><br>
+                            <textarea name="cocktail_ingredients" id="cocktail_ingredients" class="form-control" 
+                            rows="4" required></textarea>
+                        </div>
+
+                        <!-- steps text area -->
+                        <div class="mb-3">
+                            <label for="cocktail_steps">Steps</label><br>
+                            <textarea name="cocktail_steps" id="cocktail_steps" class="form-control" rows="4" required></textarea>
+                        </div>
+
+                        <!-- cocktail imgage url input -->
+                        <div class="mb-3">
+                            <label for="cocktail_image">Cocktail Image URL</label>
+                            <input type="text" class="form-control" name="cocktail_image" id="cocktail_image" required>
+                        </div>
+
+                        <!-- new cocktail recipe submit button -->
+                        <button type="submit" class="btn btn-primary">Edit Recipe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+{% endblock %}

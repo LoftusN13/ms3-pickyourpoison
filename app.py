@@ -155,6 +155,18 @@ def new_cocktail():
     return render_template("new_cocktail.html", categories=categories)
 
 
+@app.route("/edit_cocktail/<recipe_id>", methods=["GET", "POST"])
+def edit_cocktail(recipe_id):
+    """
+    Edit Cocktail
+    """
+    # searches db for the correct cocktail recipe by id
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find()
+    return render_template(
+        "edit_cocktail.html", recipe=recipe, categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
