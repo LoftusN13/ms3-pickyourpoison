@@ -144,7 +144,7 @@ def new_cocktail():
             "cocktail_name": request.form.get("cocktail_name"),
             "cocktail_ingredients": request.form.get("cocktail_ingredients"),
             "cocktail_steps": request.form.get("cocktail_steps"),
-            "cocktail_img_url": request.form.get("cocktail_image_url"),
+            "cocktail_image": request.form.get("cocktail_image"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(cocktail)

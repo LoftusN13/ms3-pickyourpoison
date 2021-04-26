@@ -5,7 +5,7 @@
         {% for recipe in recipes %}
             <div class="col-md-4">
                 <div class="card cocktail-card">
-                    <img src="{{ recipe.cocktail_image_url }}" class="card-img-top" alt="">
+                    <img src="{{ recipe.cocktail_image }}" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title">{{ recipe.cocktail_name }}</h5>
                         <p class="card-text">Main Alcohol: <strong>{{ recipe.category_name }}</strong></p>
