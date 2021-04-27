@@ -158,8 +158,27 @@ def new_cocktail():
 @app.route("/edit_cocktail/<recipe_id>", methods=["GET", "POST"])
 def edit_cocktail(recipe_id):
     """
-    Edit Cocktail
+    Edit Cocktail; creator of the recipe can
+    edit it. On submit, db will be searched
+    for the current recipe by its id. When
+    found, recipe in db will be updated
+    using the new entries in the edit recipe
+    form.
     """
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "cocktail_name": request.form.get("cocktail_name"),
+            "cocktail_ingredients": request.form.get("cocktail_ingredients"),
+            "cocktail_steps": request.form.get("cocktail_steps"),
+            "cocktail_image": request.form.get("cocktail_image"),
+            "created_by": session["user"]
+        }
+        # correct recipe will be updated using submit dictionary
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        # Alert user to successful recipe edit
+        flash("All done! Your delicious recipe has been edited!")
+
     # searches db for the correct cocktail recipe by id
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find()
