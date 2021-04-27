@@ -252,7 +252,7 @@ def edit_category(category_id):
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     """
-    Delete Category; admin can delete it. 
+    Delete Category; admin can delete it.
     category id is checked and is
     removed from db
     """
@@ -260,6 +260,11 @@ def delete_category(category_id):
     # Alert admin to successful category deletion
     flash("So long, farewell! Category has been deleted.")
     return redirect(url_for("get_categories"))
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":
