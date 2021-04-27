@@ -12,6 +12,8 @@
                             <input type="text" class="form-control" name="category_name" id="category_name" 
                             minlength="3" maxlength="25" required>
                         </div>
+                        <!-- add category cancel button -->
+                        <a href="{{ url_for('get_categories') }}" class="btn btn-warning">Cancel</a>
                         <!-- add category submit button -->
                         <button type="submit" class="btn btn-primary">Add Category</button>
                     </form>
