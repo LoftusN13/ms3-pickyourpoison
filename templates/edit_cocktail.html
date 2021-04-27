@@ -43,15 +43,18 @@
                             </textarea>
                         </div>
 
-                        <!-- cocktail imgage url input -->
+                        <!-- cocktail image url input -->
                         <div class="mb-3">
                             <label for="cocktail_image">Cocktail Image URL</label>
                             <input type="text" class="form-control" name="cocktail_image" id="cocktail_image" 
                             value="{{ recipe.cocktail_image }}" required>
                         </div>
 
+                        <!-- edit cocktail recipe cancel button -->
+                        <a href="{{ url_for('get_cocktails') }}" class="btn btn-warning">Cancel</a>
                         <!-- edit cocktail recipe submit button -->
                         <button type="submit" class="btn btn-primary">Edit Recipe</button>
+                    
                     </form>
                 </div>
             </div>
