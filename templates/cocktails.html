@@ -12,40 +12,51 @@
                     <i class="fas fa-search"></i>
                     </span>
                     <input type="search" class="form-control rounded" placeholder="Search for a cocktail or ingredient..." aria-label="Search"
-                    aria-describedby="search-addon" name="search" id="search" minlength="3" />
+                    aria-describedby="search-addon" name="search" id="search" minlength="3" required/>
                 </div>
                 <!-- search submit button -->
                 <button type="submit" class="btn btn-primary">Search</button>
-                <a href="{{ url_for('get_cocktails') }}" class="btn btn-success">Clear</a>
+                <a href="{{ url_for('get_cocktails') }}" class="btn btn-success">Reset</a>
             </form>
         </div>
     </div>
     <!-- End of SEARCH BAR -->
    
+    {% if recipes.count() > 0 %}
     <!-- COCKTAIL CARD PANELS -->
-    <div class="row">
-        <!-- each recipe has its own card panel -->
-        {% for recipe in recipes %}
-            <div class="col-md-4">
-                <div class="card cocktail-card">
-                    <img src="{{ recipe.cocktail_image }}" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ recipe.cocktail_name }}</h5>
-                        <p class="card-text">Main Alcohol: <strong>{{ recipe.category_name }}</strong></p>
-                        <small>By: {{ recipe.created_by }}</small>
+        <div class="row">
+            <!-- each recipe has its own card panel -->
+            {% for recipe in recipes %}
+                <div class="col-md-4">
+                    <div class="card cocktail-card">
+                        <img src="{{ recipe.cocktail_image }}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ recipe.cocktail_name }}</h5>
+                            <p class="card-text">Main Alcohol: <strong>{{ recipe.category_name }}</strong></p>
+                            <small>By: {{ recipe.created_by }}</small>
+                        </div>
+                        <!-- will bring user to the expected recipe page -->
+                        <a href="{{ url_for('cocktail_recipe', recipe_id=recipe._id) }}" class="btn btn-primary">View Recipe</a>
+                        
+                        <!-- only allow author of recipe to have the option to Edit and Delete it -->
+                        {% if recipe.created_by == session["user"] %}
+                            <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success">Edit</a>
+                            <a href="{{ url_for('delete_cocktail', recipe_id=recipe._id) }}" class="btn btn-danger">Delete</a>
+                        {% endif %}      
                     </div>
-                    <!-- will bring user to the expected recipe page -->
-                    <a href="{{ url_for('cocktail_recipe', recipe_id=recipe._id) }}" class="btn btn-primary">View Recipe</a>
-                    
-                    <!-- only allow author of recipe to have the option to Edit and Delete it -->
-                    {% if recipe.created_by == session["user"] %}
-                        <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success">Edit</a>
-                        <a href="{{ url_for('delete_cocktail', recipe_id=recipe._id) }}" class="btn btn-danger">Delete</a>
-                    {% endif %}      
                 </div>
-            </div>
-        {% endfor %}
-    </div>
+            {% endfor %}
+        </div>
+        <!-- alert user if no results are found in their search -->
+        {% else %}
+        <div class="alert alert-primary" role="alert">
+            <h3>No Results Found</h3>
+            <p>
+                Ooops! We don't seem to have what you're looking for yet! <br>
+                Let's search for something else!     
+            </p>
+        </div>
+    {% endif %}
     <!-- End of COCKTAIL CARD PANELS -->
 
 
