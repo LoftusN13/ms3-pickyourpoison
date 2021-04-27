@@ -264,7 +264,22 @@ def delete_category(category_id):
 
 @app.route("/contact")
 def contact():
+    """
+    Contact Page; brings user to contact
+    page with contact form
+    """
     return render_template("contact.html")
+
+
+@app.route("/cocktail_recipe/<recipe_id>")
+def cocktail_recipe(recipe_id):
+    """
+    Recipe Page; brings user to each cocktail's
+    own recipe page. searches db for correct
+    recipe id.
+    """
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("cocktail_recipe.html", recipe=recipe)
 
 
 if __name__ == "__main__":
