@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+        <!-- ADD CATEGORY CARD PANEL -->
+        <div class="row justify-content-center">
+            <div class="card col-10">
+                <div class="card-body">
+                    <h2 class="card-title">Add Category</h2>
+                    <form method="POST" action="{{ url_for('add_category') }}">
+                        <!-- category name field -->
+                        <div class="mb-3">
+                            <label for="category_name">Category Name</label>
+                            <input type="text" class="form-control" name="category_name" id="category_name" 
+                            minlength="3" maxlength="25" required>
+                        </div>
+                        <!-- add category submit button -->
+                        <button type="submit" class="btn btn-primary">Add Category</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+{% endblock %}
