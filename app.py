@@ -235,8 +235,17 @@ def edit_category(category_id):
     be updated using the new entry in the edit
     category form.
     """
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name")
+        }
+        # correct category will be updated using submit dictionary
+        mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
+        # Alert admin to successful category edit
+        flash("All done! Category has been edited!")
+        return redirect(url_for("get_categories"))
+    # db is searched for correct category id
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-
     return render_template("edit_category.html", category=category)
 
 
