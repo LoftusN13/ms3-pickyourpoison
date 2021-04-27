@@ -132,6 +132,21 @@ def get_cocktails():
     return render_template("cocktails.html", recipes=recipes)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    """
+    Search bar; user can search by cocktail name
+    or ingredient. text index of db created for
+    cocktail_name and cocktail_ingredients
+    """
+    # pulls input from search bar
+    search = request.form.get("search")
+    # searches text index
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": search}}))
+    # user brought to cocktails page with filtered results
+    return render_template("cocktails.html", recipes=recipes)
+
+
 @app.route("/new_cocktail", methods=["GET", "POST"])
 def new_cocktail():
     """
