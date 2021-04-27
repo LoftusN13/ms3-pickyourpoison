@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- CONTACT CARD PANEL -->
+    <div class="row justify-content-center contact-card">
+        <div class="card col-8">
+            <div class="card-body">
+                <h3 class="card-title">Contact Us</h3>
+                <h6 class="card-subtitle mb-2 text-muted">Test</h6>
+                <!-- contact form -->
+                <form name="contactForm" id="contactForm" onsubmit="return sendEmail(this);">
+                    <div class="form-group">
+                        <!-- name field -->
+                        <label for="fullname">Name:</label><br>
+                        <input type="text" name="fullname" id="fullname" class="form-control" required><br>
+                        
+                        <!-- email field -->
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" name="email" id="email" class="form-control" required><br>
+    
+                        <!-- message text area -->
+                        <label for="message">Your Message:</label><br>
+                        <textarea name="message" id="message" class="form-control" cols="30" rows="10" required></textarea><br>
+                        
+                        <!-- submit button -->
+                        <input type="submit" name="submit" id="submit" value="Submit">
+                    </div>
+                <!-- end of contact form -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End of CONTACT PANEL -->
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_SUjH6Ld8fSDhwwuAm9wsz");
+        })();
+    </script>
+{% endblock %}
