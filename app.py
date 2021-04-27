@@ -208,6 +208,21 @@ def get_categories():
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    """
+    Add Category; admin can add new category.
+    Category name is pulled from form and
+    inserted into categories in db
+    """
+    if request.method == "POST":
+        category = {
+            "category_name": request.form.get("category_name")
+        }
+        # New category is added to db
+        mongo.db.categories.insert_one(category)
+        # Alert admin to successful category added
+        flash("Wooo! New category added!")
+        return redirect(url_for("get_categories"))
+
     return render_template("add_category.html")
 
 
