@@ -11,4 +11,27 @@
         </div>
     </div>
     <!-- End of PROFILE CARD PANEL -->
+
+    <div class="row">
+        <h3 class="card-title">{{ username }}'s Cocktails</h3>
+        {% for recipe in recipes %}
+            <!-- only displays recipes created by current user -->
+            {% if recipe.created_by == session["user"] %}
+                <div class="col-md-4">
+                    <div class="card cocktail-card">
+                        <img src="{{ recipe.cocktail_image }}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ recipe.cocktail_name }}</h5>
+                            <p class="card-text">Main Alcohol: <strong>{{ recipe.category_name }}</strong></p>
+                            <small>By: {{ recipe.created_by }}</small>
+                        </div>
+                        <a href="{{ url_for('cocktail_recipe', recipe_id=recipe._id) }}" class="btn btn-primary">View Recipe</a>
+                        <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success">Edit</a>
+                        <a href="{{ url_for('delete_cocktail', recipe_id=recipe._id) }}" class="btn btn-danger">Delete</a>    
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
 {% endblock %}

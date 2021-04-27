@@ -104,7 +104,9 @@ def profile(username):
 
     # if current session user; user is brought to their profile
     if session["user"]:
-        return render_template("profile.html", username=username)
+        recipes = mongo.db.recipes.find()
+        return render_template(
+            "profile.html", username=username, recipes=recipes)
 
     # else redirects user to Log In
     return redirect(url_for("login"))
