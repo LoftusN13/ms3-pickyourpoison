@@ -199,6 +199,13 @@ def delete_cocktail(recipe_id):
     return redirect(url_for("get_cocktails"))
 
 
+@app.route("/get_categories")
+def get_categories():
+    # pulls category data from db
+    categories = mongo.db.categories.find()
+    return render_template("categories.html", categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
