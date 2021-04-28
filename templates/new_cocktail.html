@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
         <!-- NEW COCKTAIL CARD PANEL -->
-        <div class="row justify-content-center">
-            <div class="card col-10">
+        <div class="row justify-content-center add-card">
+            <div class="card col-md-8">
                 <div class="card-body">
                     <h2 class="card-title">New Cocktail Recipe</h2>
-                    <form method="POST" action="{{ url_for('new_cocktail') }}">
+                    <form method="POST" action="{{ url_for('new_cocktail') }}" class="add-form">
                         <!-- cocktail name field -->
                         <div class="mb-3">
                             <label for="cocktail_name">Cocktail Name</label>
@@ -42,10 +42,12 @@
                             <input type="text" class="form-control" name="cocktail_image" id="cocktail_image" required>
                         </div>
 
-                        <!-- add category cancel button -->
-                        <a href="{{ url_for('get_cocktails') }}" class="btn btn-warning">Cancel</a>
-                        <!-- new cocktail recipe submit button -->
-                        <button type="submit" class="btn btn-primary">Add Recipe</button>
+                        <div class="d-block gap-2 d-flex justify-content-end">
+                            <!-- add category cancel button -->
+                            <a href="{{ url_for('get_cocktails') }}" class="btn btn-warning cancel-btn">Cancel</a>
+                            <!-- new cocktail recipe submit button -->
+                            <button type="submit" class="btn btn-primary add-btn">Add Recipe</button>
+                        </div>
                     </form>
                 </div>
             </div>

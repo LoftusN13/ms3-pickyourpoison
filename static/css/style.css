@@ -152,22 +152,28 @@ hr {
     padding-top: .5rem;
 }
 
-.search-btn {
+.search-btn,
+.add-btn {
     background-color: #861388;
     color: #F5F4F6;
     border: 0 none;
 }
-.search-btn:hover {
+.search-btn:hover,
+.add-btn:hover {
     background-color: #FF6B6B;
 }
 
-.reset-btn {
+.reset-btn,
+.cancel-btn {
     background-color: #55D7F1;
     color: #08060E;
     border: 0 none;
 }
-.reset-btn:hover {
+
+.reset-btn:hover,
+.cancel-btn:hover {
     background-color: #55D7F1;
+    color: #F5F4F6;
     text-shadow: .06rem .06rem .1rem #08060E;
     font-weight: 500;  
 }
@@ -225,7 +231,8 @@ hr {
 /*-------------------------Form Pages----------------------- */
 .register-card,
 .login-card,
-.contact-card {
+.contact-card,
+.add-card {
     margin: 0;
     padding: 2rem 1rem;
     text-align: center;
@@ -236,7 +243,8 @@ hr {
 }
 
 .register-form,
-.login-form {
+.login-form,
+.add-form {
     text-align: left;
     padding: 2rem;
 }
