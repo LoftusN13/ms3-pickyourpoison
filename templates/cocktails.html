@@ -41,8 +41,33 @@
                         <!-- only allow author of recipe to have the option to Edit and Delete it -->
                         {% if recipe.created_by == session["user"] %}
                             <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success">Edit</a>
-                            <a href="{{ url_for('delete_cocktail', recipe_id=recipe._id) }}" class="btn btn-danger">Delete</a>
+                            <!-- triggers modal to open when clicked to prevent accidental deletions -->
+                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete_modal_{{recipe._id}}">Delete</a>
                         {% endif %}      
+                    </div>
+                </div>
+  
+                <!-- DELETE-COCKTAIL CONFIRMATION MODAL -->
+                <div class="modal fade" id="delete_modal_{{recipe._id}}" aria-labelledby="Confirm Deletion Modal" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Are You Sure?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                Once you delete your delicious cocktail recipe, it's gone forever! <br>
+                                Are you really sure you want to delete it?
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- cancel deletion; closes modal -->
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <!-- confirms deletion of cocktail recipe -->
+                            <a href="{{ url_for('delete_cocktail', recipe_id=recipe._id) }}" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
                     </div>
                 </div>
             {% endfor %}
