@@ -1,9 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="hero-img">
-
+    <!-- HERO IMAGE -->
+    <div class="hero-container">
+        <img src="static/images/hero-image.jpg" class="img-fluid" alt="Variety of cocktail drinks">
     </div>
+    <!-- End of HERO IMAGE -->
 
+    <!-- MAIN HEADING -->
+    <div class="container-fluid">
+        <h1>Cocktails</h1>
+        <p>Content here</p>
+    </div>
+    <!-- End of MAIN HEADING -->
+
+    <!-- SEARCH BAR -->
     <div class="row justify-content-center">
         <div class="card col-8">
             <!-- search bar form -->
@@ -22,5 +32,23 @@
             </form>
         </div>
     </div>
+    <!-- End of SEARCH BAR -->
+
+    <!-- MAIN CONTENT -->
+    <div class="container-fluid">
+        <h2>Heading</h2>
+        <p>
+            Content here
+        </p>
+        <!-- link to view all recipes -->
+        <p>
+            Click <a href="{{ url_for('get_cocktails') }}">Here</a> To View All Cocktail Recipes
+        </p>
+        <!-- link to register for account -->
+        <p>
+            <a href="{{ url_for('register') }}">Create an Account</a> to Add and Edit Your Own Recipes!
+        </p>
+    </div>
+    <!-- End of MAIN CONTENT -->
 
 {% endblock %}
