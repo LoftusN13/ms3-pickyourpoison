@@ -232,7 +232,8 @@ hr {
 .register-card,
 .login-card,
 .contact-card,
-.add-card {
+.add-card,
+.edit-card {
     margin: 0;
     padding: 2rem 1rem;
     text-align: center;
@@ -244,7 +245,8 @@ hr {
 
 .register-form,
 .login-form,
-.add-form {
+.add-form,
+.edit-form {
     text-align: left;
     padding: 2rem;
 }
