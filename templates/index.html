@@ -2,20 +2,36 @@
 {% block content %}
     <!-- HERO IMAGE -->
     <div class="hero-container">
-        <img src="static/images/hero-image.jpg" class="img-fluid" alt="Variety of cocktail drinks">
+        <img src="static/images/hero-image.jpg" class="img-fluid hero-image" alt="Variety of cocktail drinks">
     </div>
     <!-- End of HERO IMAGE -->
 
-    <!-- MAIN HEADING -->
-    <div class="container-fluid">
-        <h1>Cocktails</h1>
-        <p>Content here</p>
+    <!-- MAIN CONTENT -->
+    <div class="container-fluid row">
+        <h1>Pick Your Poison</h1>
+        <div class="col-md-6 home-content">
+            <p>
+                Welcome to <em>Pick Your Poison</em>! If you have found yourself here, I think we can safely assume that
+                we share a common interest or love; cocktails!
+            </p>
+            <p>
+                We created this site with people like you in mind. We wanted somewhere where people could come to uncover
+                new and exciting cocktails as well as being able to share their own recipes with the rest of the community! <br>
+            </p>
+            <p>
+                So don't be shy! Browse through our recipes, create an account and share your own cocktails with us!
+            </p>
+        </div>
+
+        <div class="col-md-6 home-image">
+            <img class="img-fluid" src="static/images/home-cocktails.jpeg" alt="">
+        </div>
     </div>
-    <!-- End of MAIN HEADING -->
+    <!-- End of MAIN CONTENT -->
 
     <!-- SEARCH BAR -->
-    <div class="row justify-content-center">
-        <div class="card col-8">
+    <div class="row justify-content-center search-section">
+        <div class="col-sm-12 col-md-10">
             <!-- search bar form -->
             <form class="search-bar" method="POST" action="{{ url_for('search') }}">
                 <!-- search bar -->
@@ -34,12 +50,8 @@
     </div>
     <!-- End of SEARCH BAR -->
 
-    <!-- MAIN CONTENT -->
-    <div class="container-fluid">
-        <h2>Heading</h2>
-        <p>
-            Content here
-        </p>
+    <!-- LINKS -->
+    <div class="container-fluid row home-links">
         <!-- link to view all recipes -->
         <p>
             Click <a href="{{ url_for('get_cocktails') }}">Here</a> To View All Cocktail Recipes
@@ -49,6 +61,6 @@
             <a href="{{ url_for('register') }}">Create an Account</a> to Add and Edit Your Own Recipes!
         </p>
     </div>
-    <!-- End of MAIN CONTENT -->
+    <!-- End of LINKS-->
 
 {% endblock %}
