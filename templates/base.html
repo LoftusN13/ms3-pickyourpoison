@@ -60,8 +60,9 @@
                                     <a class="nav-link" href="{{ url_for('get_categories') }}">Categories</a>
                                 </li>
                             {% endif %}
+                            <!-- link will trigger a logout confirmation modal -->
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+                                <a class="nav-link btn" data-bs-toggle="modal" data-bs-target="#logout_modal">Log Out</a>
                             </li>
                         <!-- links only available to logged out users -->
                         {% else %}
@@ -78,6 +79,29 @@
         </nav>
         <!-- End of NAVBAR -->
     </header>
+
+    <!-- LOGOUT CONFIRMATION MODAL -->
+    <div class="modal fade" id="logout_modal" aria-labelledby="Confirm Logout Modal" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Leaving So Soon?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Are you sure you want to leave us?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <!-- cancel logout; closes modal -->
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <!-- confirms and successfully logs user out -->
+                <a href="{{ url_for('logout')}}" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <!-- FLASH MESSAGES -->
     <div>
