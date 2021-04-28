@@ -204,6 +204,10 @@ hr {
     text-align: left;    
 }
 
+.cocktail-recipe i {
+    color: #861388;
+}
+
 .recipe-instructions,
 .recipe-steps {
     padding-bottom: 1rem;

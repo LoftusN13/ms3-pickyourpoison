@@ -28,18 +28,34 @@
                             <label for="cocktail_ingredients">Ingredients</label><br>
                             <textarea name="cocktail_ingredients" id="cocktail_ingredients" class="form-control" 
                             rows="4" required></textarea>
+                            <div id="ingredients-help" class="form-text">
+                                One ingredient per line
+                            </div>
                         </div>
 
                         <!-- steps text area -->
                         <div class="mb-3">
                             <label for="cocktail_steps">Steps</label><br>
-                            <textarea name="cocktail_steps" id="cocktail_steps" class="form-control" rows="4" required></textarea>
+                            <textarea name="cocktail_steps" id="cocktail_steps" class="form-control" 
+                                rows="4" required></textarea>
+                            <div id="steps-help" class="form-text">
+                                Each step should have its own line
+                            </div>
                         </div>
 
                         <!-- cocktail imgage url input -->
                         <div class="mb-3">
                             <label for="cocktail_image">Cocktail Image URL</label>
                             <input type="text" class="form-control" name="cocktail_image" id="cocktail_image" required>
+                        </div>
+
+                        <!-- cocktail imgage credits input -->
+                        <div class="mb-3">
+                            <label for="image-credit">Cocktail Image Credit</label>
+                            <input type="text" class="form-control" name="image-credit" id="image-credit" required>
+                            <div id="image-help" class="form-text">
+                                The source of your cocktail image (website, photographer, yourself etc!)
+                            </div>
                         </div>
 
                         <div class="d-block gap-2 d-flex justify-content-end">
