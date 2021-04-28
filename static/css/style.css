@@ -174,7 +174,7 @@ hr {
 /*-------------------------Cocktails Page----------------------- */
 
 
-/*-------------------------Register Page----------------------- */
+/*-------------------------Form Pages----------------------- */
 .register-card,
 .login-card,
 .contact-card {
@@ -188,11 +188,36 @@ hr {
 }
 
 .register-form,
-.login-form,
-#contactForm {
+.login-form {
     text-align: left;
     padding: 2rem;
 }
 
+.register-card a,
+.login-card a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #861388;
+}
+.register-card a:hover,
+.login-card a:hover {
+    color: #55D7F1;
+    text-shadow: 0.06rem 0.06rem 0.05rem #08060E;  
+}
+
+.login-btn,
+.register-btn,
+.contact-btn {
+    background-color: #55D7F1;
+    color: #08060E;
+    border: 0 none;
+}
+.login-btn:hover,
+.register-btn:hover,
+.contact-btn:hover {
+    background-color: #55D7F1;
+    text-shadow: 0.06rem 0.06rem 0.1rem #08060E;
+    font-weight: 500; 
+}
 
 /*-------------------------Media Queries---------------------- */

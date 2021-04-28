@@ -2,10 +2,12 @@
 {% block content %}
     <!-- LOG IN CARD PANEL -->
     <div class="row justify-content-center login-card">
-        <div class="card col-8">
+        <div class="card col-md-8">
             <div class="card-body">
-                <h3 class="card-title">Log In</h3>
-                <h6 class="card-subtitle mb-2 text-muted">Test</h6>
+                <h2 class="card-title">Log In</h2>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    Welcome back old friend! Log in to edit or add more of your recipes!
+                </h6>
                 <!-- log in form -->
                 <form class="login-form" method="POST" action="{{ url_for('login') }}">
                     <!-- username field -->
@@ -15,20 +17,27 @@
                         <input type="text" class="form-control" name="username" id="username"
                             minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" required>
                     </div>
+
                     <!-- password field -->
                     <div class="mb-3">
-                        <i class="fas fa-lock"></i>
+                        <i class="fa fa-unlock-alt"></i>
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" id="password"
                             minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" required>
+                    </div> 
+                          
                     <!-- log in submit button -->
-                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <div class="d-block gap-2 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary login-btn">Log In</button>
+                    </div>
                 </form>
+
+                <!-- registration link -->
+                <div>
+                    <p>Don't Have An Account?</p><a href="{{ url_for('register') }}">Register Here!</a>
+                </div>
             </div>
         </div>
     </div>
     <!-- End of LOG IN CARD PANEL -->
-    <div>
-        <p>Don't Have An Account?</p><a href="{{ url_for('register') }}">Register Here!</a>
-    </div>
 {% endblock %}

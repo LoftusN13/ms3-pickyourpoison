@@ -7,27 +7,35 @@
     
     <!-- CONTACT CARD PANEL -->
     <div class="row justify-content-center contact-card">
-        <div class="card col-8">
+        <div class="card col-md-8">
             <div class="card-body">
-                <h3 class="card-title">Contact Us</h3>
-                <h6 class="card-subtitle mb-2 text-muted">Test</h6>
+                <h2 class="card-title">Contact Us</h2>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    Have any questions or suggestions for us? <br>
+                    Fill out the form below and we will get back to you as soon as we can!
+                </h6>
                 <!-- contact form -->
                 <form name="contactForm" id="contactForm" onsubmit="return sendEmail(this);">
                     <div class="form-group">
                         <!-- name field -->
+                        <i class="fa fa-user"></i>
                         <label for="fullname">Name:</label><br>
                         <input type="text" name="fullname" id="fullname" class="form-control" required><br>
                         
                         <!-- email field -->
+                        <i class="fa fa-envelope"></i>
                         <label for="email">Email Address:</label><br>
                         <input type="email" name="email" id="email" class="form-control" required><br>
-    
+
                         <!-- message text area -->
+                        <i class="fa fa-comments"></i>
                         <label for="message">Your Message:</label><br>
                         <textarea name="message" id="message" class="form-control" cols="30" rows="10" required></textarea><br>
                         
                         <!-- submit button -->
-                        <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary">
+                        <div class="d-block gap-2 d-flex justify-content-center">
+                            <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary contact-btn">
+                        </div>
                     </div>
                 <!-- end of contact form -->
                 </form>
