@@ -81,27 +81,39 @@ hr {
 /*-------------------------Footer----------------------- */
 .footer-section {
     background-color: #08060E;
-    color: #FFFCF7;
+    color: #F5F4F6;
     text-align: center;
-    padding: 2rem 1rem 1rem 1rem;
-    font-size: .8rem;
+    padding: 1rem;
+    font-size: 1rem;
 }
 
 .footer-section a {
-    color: #FFFCF7;
+    color: #F5F4F6;
     text-decoration: none;
+}
+.footer-section a:hover {
+    color: #55D7F1;
+    font-weight: 600;
 }
 
 .footer-section a i {
-    color: #FFFCF7;
+    color: #F5F4F6;
     font-size: 1.7rem;
     padding: 1rem 1.5rem;
     border: none;
+}
+.footer-section a i:hover {
+    color: #55D7F1;
 }
 
 .footer-copyright {
     text-align: left;
     font-weight: 200;
+    font-size: .8rem;
+}
+
+.contact-link {
+    padding: 1rem 0 1.5rem 0;
 }
 
 /*-------------------------Home Page----------------------- */
