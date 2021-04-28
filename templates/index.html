@@ -2,7 +2,7 @@
 {% block content %}
     <!-- HERO IMAGE -->
     <div class="hero-container">
-        <img src="static/images/hero-image.jpg" class="img-fluid hero-image" alt="Variety of cocktail drinks">
+        <img src="static/images/hero.jpg" class="img-fluid hero-image" alt="Bar with neon sign">
     </div>
     <!-- End of HERO IMAGE -->
 
@@ -23,8 +23,8 @@
             </p>
         </div>
 
-        <div class="col-md-6 home-image">
-            <img class="img-fluid" src="static/images/home-cocktails.jpeg" alt="">
+        <div class="col-md-6">
+            <img class="img-fluid home-image" src="static/images/home-cocktails.jpeg" alt="">
         </div>
     </div>
     <!-- End of MAIN CONTENT -->
@@ -43,8 +43,10 @@
                       aria-describedby="search-addon" name="search" id="search" minlength="3" required/>
                 </div>
                 <!-- search submit button -->
-                <button type="submit" class="btn btn-primary">Search</button>
-                <a href="{{ url_for('index') }}" class="btn btn-success">Reset</a>
+                <div class="d-block gap-2 d-flex justify-content-end search-btns">
+                    <a href="{{ url_for('index') }}" class="btn btn-primary reset-btn">Reset</a>
+                    <button type="submit" class="btn btn-primary search-btn">Search</button>
+                </div>
             </form>
         </div>
     </div>
