@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <div class="container-fluid row">
+        <h1>What's Your Poison?</h1>
+    </div>
+
     <!-- SEARCH BAR -->
-    <div class="row justify-content-center">
-        <div class="card col-8">
+    <div class="row justify-content-center search-section">
+        <div class="col-sm-12 col-md-10">
             <!-- search bar form -->
             <form class="search-bar" method="POST" action="{{ url_for('search') }}">
                 <!-- search bar -->
@@ -24,7 +28,7 @@
    
     {% if recipes.count() > 0 %}
     <!-- COCKTAIL CARD PANELS -->
-        <div class="row">
+        <div class="row cocktail-card-panels">
             <!-- each recipe has its own card panel -->
             {% for recipe in recipes %}
                 <div class="col-md-4">

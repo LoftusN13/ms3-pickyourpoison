@@ -7,8 +7,14 @@ body {
     color: #08060E;
     font-family: 'Montserrat', sans-serif;
 }
+
+/*-------------------------Margins----------------------- */
 .container-fluid {
     padding-left: 0;
+}
+
+.row {
+    margin-right: 0;
 }
 
 /*-------------------------Header----------------------- */
@@ -87,8 +93,16 @@ hr {
     font-weight: 200;
 }
 
+/*-------------------------Home Page----------------------- */
+
+
+/*-------------------------Cocktails Page----------------------- */
+
+
 /*-------------------------Register Page----------------------- */
-.register-card {
+.register-card,
+.login-card,
+.contact-card {
     margin: 0;
     padding: 2rem 1rem;
     text-align: center;
@@ -98,7 +112,9 @@ hr {
     padding: 1rem 0;
 }
 
-.register-form {
+.register-form,
+.login-form,
+#contactForm {
     text-align: left;
     padding: 2rem;
 }
