@@ -4,7 +4,7 @@
     <!-- COCKTAIL CARD -->
     <div class="card cocktail-recipe">
         <div class="row">
-            <h1>{{ recipe.cocktail_name }}</h1>
+            <h2>{{ recipe.cocktail_name }}</h2>
             <p>
                 Type of Cocktail: {{ recipe.category_name }} <br>
                 <em><small>By: {{ recipe.created_by }}</small></em>
@@ -16,7 +16,7 @@
                 <img src="{{ recipe.cocktail_image }}" class="card-img-top" alt="{{ recipe.cocktail_name }} Image">
             </div>
             <div class="col-lg-6 recipe-instructions">
-                <h4>Instructions:</h4>
+                <h3>Instructions:</h3>
                 {% for line in recipe.cocktail_ingredients.splitlines() %}
                     <ul>
                         <li>{{ line }}</li>
@@ -27,10 +27,10 @@
 
         <div class="row">
             <div class="recipe-steps">
-                <h4>Steps:</h4>
+                <h3>Steps:</h3>
                 {% for line in recipe.cocktail_steps.splitlines() %}
                     <ul>
-                        <li>{{ line }}</li>
+                        <li><i class="fas fa-cocktail"></i>{{ line }}</li>
                     </ul>
                 {% endfor %}
             </div>

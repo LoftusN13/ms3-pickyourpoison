@@ -25,7 +25,23 @@ h1 {
     text-align: center;
     padding: 2rem 2rem 1rem 2rem;
     color: #55D7F1;
-    text-shadow: 0.15rem 0.15rem 0.2rem #08060E;
+    text-shadow: .15rem .15rem .2rem #08060E;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1.5rem 2rem .5rem 2rem;
+    color: #861388;
+    text-shadow: .08rem .08rem .2rem #08060E;
+}
+
+h3 {
+    font-size: 1.8rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+    color: #55D7F1;
+    text-shadow: .05rem .05rem .05rem #08060E;
+    margin-bottom: 0;
 }
 
 /*-------------------------Header----------------------- */
@@ -152,7 +168,7 @@ hr {
 }
 .reset-btn:hover {
     background-color: #55D7F1;
-    text-shadow: 0.06rem 0.06rem 0.1rem #08060E;
+    text-shadow: .06rem .06rem .1rem #08060E;
     font-weight: 500;  
 }
 
@@ -168,11 +184,43 @@ hr {
 }
 .home-links a:hover {
     color: #55D7F1;
-    text-shadow: 0.06rem 0.06rem 0.05rem #08060E;  
+    text-shadow: .06rem .06rem .05rem #08060E;  
 }
 
 /*-------------------------Cocktails Page----------------------- */
 
+/*-------------------------Cocktail Recipe Page----------------------- */
+.cocktail-recipe {
+    text-align: center;
+}
+
+.cocktail-recipe li {
+    text-align: left;    
+}
+
+.recipe-instructions,
+.recipe-steps {
+    padding-bottom: 1rem;
+}
+
+.recipe-steps ul {
+    list-style: none;
+    padding: 0 1.5rem;
+}
+
+.recipe-steps i {
+    color: #FF6B6B;
+    padding-right: .6rem;
+    font-size: 1.3rem;
+}
+.recipe-instructions {
+    padding: 0 1.5rem;
+}
+
+.recipe-instructions ul {
+    padding: .2rem 2rem;
+    margin-bottom: 0;
+}
 
 /*-------------------------Form Pages----------------------- */
 .register-card,
@@ -207,7 +255,7 @@ hr {
 .register-card a:hover,
 .login-card a:hover {
     color: #55D7F1;
-    text-shadow: 0.06rem 0.06rem 0.05rem #08060E;  
+    text-shadow: .06rem .06rem .05rem #08060E;  
 }
 
 .login-btn,
@@ -221,7 +269,7 @@ hr {
 .register-btn:hover,
 .contact-btn:hover {
     background-color: #55D7F1;
-    text-shadow: 0.06rem 0.06rem 0.1rem #08060E;
+    text-shadow: .06rem .06rem .1rem #08060E;
     font-weight: 500; 
 }
 
