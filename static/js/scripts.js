@@ -7,11 +7,13 @@ function sendEmail(contactForm){
     .then(
         /* Alert user to successful form submission */
         function(response) {
-            document.getElementById("submit-msg").innerHTML = "It's on the way! Your message has been sent!";
+            let msg = document.getElementById("submit-msg");
+            msg.style.display = "block";
+
         },
         /* Alert user to unsuccessful form submission */
         function(error) {
-             document.getElementById("submit-msg").innerHTML = "Uh-oh! Something went wrong; message has not been sent!";
+            document.getElementById("submit-msg");innerHTML = "Uh-oh! Something went wrong; message has not been sent!";
         }
     );
 

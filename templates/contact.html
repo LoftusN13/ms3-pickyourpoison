@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
     <!-- FORM SUBMISSION MESSAGE -->
-    <div class="row">
-        <p id="submit-msg"></p>
+    <div class="row" id="submit-msg">
+        <div class="alert alert-primary" role="alert">
+            It's on the way! Your message has been sent!
+        </div>
     </div>
-    
+
     <!-- CONTACT CARD PANEL -->
     <div class="row justify-content-center contact-card">
         <div class="card col-md-8">
@@ -39,6 +41,7 @@
                     </div>
                 <!-- end of contact form -->
                 </form>
+                
             </div>
         </div>
     </div>

@@ -308,6 +308,12 @@ h5 {
     text-align: center;
 }
 
+/*-------------------------Contact Page----------------------- */
+#submit-msg {
+    display: none;
+    text-align: center;
+}
+
 /*-------------------------Categories Page----------------------- */
 .category-card-panels {
     text-align: center;
