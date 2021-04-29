@@ -49,11 +49,17 @@ h3 {
     margin-bottom: 0;
 }
 
-.modal-header{
+.modal-header {
     text-align: center;
     color: #FF6B6B;
     text-shadow: .05rem .05rem .04rem #08060E;
     padding-top: 1rem;
+}
+
+h5 {
+    text-align: center;
+    color: #861388;
+    text-shadow: .05rem .05rem .06rem #08060E;
 }
 
 /*-------------------------Buttons----------------------- */
@@ -209,6 +215,20 @@ hr {
 }
 
 /*-------------------------Cocktails Page----------------------- */
+.cocktail-card-panels {
+    text-align: center;
+}
+
+.view-btn {
+    background-color: #55D7F1;
+    color: #08060E;
+    border: 0 none;
+}
+.view-btn:hover {
+    background-color: #861388;
+    text-shadow: .06rem .06rem .1rem #08060E;
+    font-weight: 400;  
+}
 
 /*-------------------------Cocktail Recipe Page----------------------- */
 .cocktail-recipe {

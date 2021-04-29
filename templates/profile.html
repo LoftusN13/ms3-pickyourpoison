@@ -23,9 +23,12 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ recipe.cocktail_name }}</h5>
                             <p class="card-text">Main Alcohol: <strong>{{ recipe.category_name }}</strong></p>
-                            <small>By: {{ recipe.created_by }}</small>
                         </div>
-                        <a href="{{ url_for('cocktail_recipe', recipe_id=recipe._id) }}" class="btn btn-primary">View Recipe</a>
+
+                        <div class="d-block gap-2 d-flex justify-content-center">
+                            <a href="{{ url_for('cocktail_recipe', recipe_id=recipe._id) }}" class="btn btn-primary view-btn">View Recipe</a>
+                        </div>
+                        
                         <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success">Edit</a>
                         <!-- triggers modal to open when clicked to prevent accidental deletions -->
                         <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete_modal_{{recipe._id}}">Delete</a>    

@@ -31,7 +31,7 @@
    
     {% if recipes.count() > 0 %}
     <!-- COCKTAIL CARD PANELS -->
-        <div class="row cocktail-card-panels">
+        <div class="row cocktail-card-panels row">
             <!-- each recipe has its own card panel -->
             {% for recipe in recipes %}
                 <div class="col-md-4">
@@ -40,11 +40,13 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ recipe.cocktail_name }}</h5>
                             <p class="card-text">Main Alcohol: <strong>{{ recipe.category_name }}</strong></p>
-                            <small>By: {{ recipe.created_by }}</small>
                         </div>
-                        <!-- will bring user to the expected recipe page -->
-                        <a href="{{ url_for('cocktail_recipe', recipe_id=recipe._id) }}" class="btn btn-primary">View Recipe</a>
-                        
+
+                        <div class="d-block gap-2 d-flex justify-content-center">
+                            <!-- will bring user to the expected recipe page -->
+                            <a href="{{ url_for('cocktail_recipe', recipe_id=recipe._id) }}" class="btn btn-primary view-btn">View Recipe</a>
+                        </div>
+
                         <!-- only allow author of recipe to have the option to Edit and Delete it -->
                         {% if recipe.created_by == session["user"] %}
                             <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success">Edit</a>
