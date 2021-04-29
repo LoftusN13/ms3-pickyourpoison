@@ -135,9 +135,10 @@ def get_cocktails():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     """
-    Search bar; user can search by cocktail name
-    or ingredient. text index of db created for
-    cocktail_name and cocktail_ingredients
+    Search bar; user can search by cocktail name,
+    ingredient or category. text index of db created for
+    cocktail_name, cocktail_ingredients and
+    category_name
     """
     # pulls input from search bar
     search = request.form.get("search")
