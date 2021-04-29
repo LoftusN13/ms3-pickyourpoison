@@ -58,7 +58,7 @@ Registered Users
 - As a registered user, I want to easily log in with my username and password.
 - As a registered user, I want to easily create my own cocktail recipes.
 - As a registered user, I want to easily edit or delete my own cocktail recipes.
-- As a registered user, I want to easily view and edit my profile
+- As a registered user, I want to easily view my profile
 - As a registered user, I want to easily log out from my account.
 - As a registered user, I want visual confirmation of any task performed.
 
@@ -77,7 +77,6 @@ For all Users:
 - A *fixed navigation bar* must be included to allow users to easily navigate throughout the site.
 - A clear way of contacting the site owners must be provided via a *contact form*.
 - A clear and simple means of searching for and browsing cocktail recipes must be provided via a *search bar*.
-- Cocktail recipes should be divided into categories to allow users to more easily find what they are looking for.
 
 For First-Time Users/Non-Members: 
 - Clear information about the purpose of the site must be provided.
@@ -88,7 +87,7 @@ For Registered Users:
     - logging into their account,
     - creating a new cocktail recipe, 
     - editing or deleting their recipes, 
-    - viewing and editing their profile, 
+    - viewing their profile, 
     - and logging out of their account must be provided.
 - Visual confirmation of tasks performed must be provided.
 
@@ -209,7 +208,7 @@ All icons used on the site are from Font Awesome. They are used to show users wh
 #### Final Design Changes
 Throughout the development process I changed some elements of design as I found that they either weren't practical, or they appeared better on paper (i.e. wireframes) than on a live site. <br>
 
-The main change was on the *Recipes* page. Initially I planned on that page being a dropdown menu in the navbar which would allow the user to select their cocktail based on its type/category. I decided, however, that this would be a feature best **left for a future release** when there would be a much larger selection of recipes. While the site is only starting to collect recipes I thought that it was creating an unnessary complication for users. As it is, it is still easy for users to browse the recipes and the search bar makes it possible for them to narrow down their search. <br>
+The main change was on the *Recipes* page. Initially I planned on that page being a dropdown menu in the navbar which would allow the user to select their cocktail based on its type/category. I decided, however, that this would be a feature best **left for a future release** when there would be a much larger selection of recipes. While the site is only starting to collect recipes I thought that it was creating an unnessary complication for users, i.e. there didn't seem much point in users having to click into a card panel of *Whiskey* cocktails if there's currently only one recipe in that category. As it is, it is still easy for users to browse the recipes and the search bar makes it possible for them to narrow down their search. <br>
 
 Other differences merely involved slight layout changes of various pages on different screen sizes allowing for a more improved design.
 

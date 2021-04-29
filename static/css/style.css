@@ -240,6 +240,10 @@ h5 {
     font-weight: 400;  
 }
 
+.search-alert {
+    text-align: center;
+}
+
 /*-------------------------Cocktail Recipe Page----------------------- */
 .cocktail-recipe {
     text-align: center;
