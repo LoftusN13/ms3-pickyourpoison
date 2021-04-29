@@ -4,6 +4,7 @@
     <!-- COCKTAIL CARD -->
     <div class="card cocktail-recipe">
         <div class="row return-link">
+            <!-- returns user to all Recipes page -->
             <a href="{{ url_for('get_cocktails') }}">Back to All Recipes</a>
         </div>
         <div class="row">
@@ -50,6 +51,7 @@
                 {% endfor %}
             </div>
         </div>
+        <!-- End of COCKTAIL CARD -->
         
         <!-- DELETE-COCKTAIL CONFIRMATION MODAL -->
         <div class="modal fade" id="delete_modal_{{recipe._id}}" aria-labelledby="Confirm Deletion Modal" aria-hidden="true">
@@ -72,7 +74,8 @@
                 </div>
             </div>
             </div>
-        </div>     
+        </div> 
+        <!-- End of MODAL -->    
     </div>
 
 {% endblock %}

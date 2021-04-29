@@ -127,15 +127,6 @@ h5 {
     color: #55D7F1;
 }
 
-.nav-item .active {
-    font-weight: 600;
-    color: #55D7F1;
-}
-
-.nav-item .active:hover {
-    color: #F5F4F6;
-}
-
 .navbar button {
     padding-right: 1.5rem;
 }
@@ -430,8 +421,6 @@ h5 {
         padding-right: 1rem;
     }
 }
-
-
 
 @media only screen and (min-width: 992px) {
     .home-content {
