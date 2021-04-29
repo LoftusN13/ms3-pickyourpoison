@@ -277,7 +277,7 @@ h5 {
     color: #861388;
 }
 
-.recipe-instructions,
+.recipe-ingredients,
 .recipe-steps {
     padding-bottom: 1rem;
 }
@@ -292,11 +292,11 @@ h5 {
     padding-right: .6rem;
     font-size: 1.3rem;
 }
-.recipe-instructions {
+.recipe-ingredients {
     padding: 0 1.5rem;
 }
 
-.recipe-instructions ul {
+.recipe-ingredients ul {
     padding: .2rem 2rem;
     margin-bottom: 0;
 }

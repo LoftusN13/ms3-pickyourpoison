@@ -31,7 +31,7 @@
                 <small><i class="fas fa-camera cam-icon"></i> Credits: {{ recipe.image_credit }}</small>
             </div>
             <div class="col-lg-6 recipe-instructions">
-                <h3>Instructions:</h3>
+                <h3>Ingredients:</h3>
                 {% for line in recipe.cocktail_ingredients.splitlines() %}
                     <ul>
                         <li>{{ line }}</li>
