@@ -13,6 +13,10 @@ body {
     text-align: center;
 }
 
+.flash-message .alert {
+    margin-bottom: 0;
+}
+
 /*-------------------------Margins----------------------- */
 .container-fluid {
     padding-left: 0;
