@@ -18,12 +18,19 @@ This website has been created as my submission for Milestone Project 3 for the C
     - [Structure](#structure)
     - [Skeleton](#skeleton)
     - [Surface](#surface)
+        - [Design](#design)
+        - [Colours](#colours)
+        - [Fonts and Icons](#fonts-and-icons)
+        - [Final Design Changes](#final-design-changes)
  - [**Features**](#features)
  - [**Technologies Used**](#technologies-used)
     - [Languages](#languages)
     - [Technologies](#technologies)
  - [**Testing**](#testing)
  - [**Deployment**](#deployment)
+    - [Creating the Project](#creating-the-project)
+    - [Deploying to Heroku](#deploying-to-heroku)
+    - [Deploying Locally](#deploying-locally)
  - [**Credits**](#credits)
     - [Content](#content)
     - [Code](#code)
@@ -179,10 +186,32 @@ All wireframes can be found below;
 
 ### **Surface**
 #### Design
+The overall design of the site is quite simple while also being visually appealing. I wanted all elements and features to be laid out in such a way that everything is very clear for the user. As the purpose of the site is for users to browse recipes and/or add their own, it was important that users were able to perform these tasks easily without design flaws creating unnessary work for them.
 
 #### Colour
+I wanted to choose a darker colour scheme for some main elements of the site, primarily the navigation bar and footer, as I knew that the images of cocktails uploaded would all be extremely bright and colourful. I didn't want the user to experience visual overload by having a huge array of bright and distracting colours wherever they went on the site. <br>
 
-#### Imagery
+I used [Coolors](https://coolors.co/) to help me choose colours that worked well together. The brighter colours are used throughout the site for headings and buttons, enough to bring nice pops of colour without being too overwhelming.
+
+- 080603 Xiketic
+- 55D7F1 Sky Blue Crayola
+- F5F4F6 Cultured
+- 861388 Mardi Gras
+- FF6B6B Bittersweet
+
+![Site Colour Scheme](./documentation/colour-scheme.png)
+
+#### Fonts and Icons
+I chose Google's Montserrat as the primary font for the site as it has a very clear and modern appearance. Initially I was going to use another Google font, Dancing Script for the headings, to match the logo font, but I found that it affected the headings' legibility so I stuck with Montserrat. <br>
+
+All icons used on the site are from Font Awesome. They are used to show users which social media platform they can expect to be brought to in the footer. They are also used on the Login, Register and Contact Forms to emphasise the input fields. Icons are also used on each Cocktail Recipe page, one to emphasise the image source text under the image, and the other is used for the recipe steps rather than having regular bullet point.
+
+#### Final Design Changes
+Throughout the development process I changed some elements of design as I found that they either weren't practical, or they appeared better on paper (i.e. wireframes) than on a live site. <br>
+
+The main change was on the *Recipes* page. Initially I planned on that page being a dropdown menu in the navbar which would allow the user to select their cocktail based on its type/category. I decided, however, that this would be a feature best **left for a future release** when there would be a much larger selection of recipes. While the site is only starting to collect recipes I thought that it was creating an unnessary complication for users. As it is, it is still easy for users to browse the recipes and the search bar makes it possible for them to narrow down their search. <br>
+
+Other differences merely involved slight layout changes of various pages on different screen sizes allowing for a more improved design.
 
 ---
 ## <p align="center">**Features**</p>
