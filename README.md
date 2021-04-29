@@ -23,6 +23,8 @@ This website has been created as my submission for Milestone Project 3 for the C
         - [Fonts and Icons](#fonts-and-icons)
         - [Final Design Changes](#final-design-changes)
  - [**Features**](#features)
+    - [Features Left to Implement](#features-left-to-implement)
+
  - [**Technologies Used**](#technologies-used)
     - [Languages](#languages)
     - [Technologies](#technologies)
@@ -214,7 +216,7 @@ Other differences merely involved slight layout changes of various pages on diff
 
 ---
 ## <p align="center">**Features**</p>
-All features on the site have been put in place to make the user's experience as smooth and simple as possible. As mentioned earlier, it is designed to allow users to complete whatever task they have come to the site to do in an efficient way. It is visually consistent and responsive to keep the user comfortable. The same navigation bar and footer are present on all pages of the site to ensure navigation ease and consistency.
+All features on the site have been put in place to make the user's experience as smooth and simple as possible. As mentioned earlier, it is designed to allow users to complete whatever task they have come to the site to do in an efficient way. It is visually consistent and responsive to keep the user comfortable. The same navigation bar and footer are present on all pages of the site to ensure navigation ease and consistency. All links change appearance when hovered over to confirm they are links.
 
 #### Home Page
 - The landing page contains a hero image to set the overall tone of site.
@@ -340,6 +342,16 @@ All features on the site have been put in place to make the user's experience as
     - All four links open in a new tab so that the user does not lose their way back to the site.
     - All four links will only bring the user to the general social media platform rather than to a specific profile.
 
+### Features Left to Implement
+####  More Specific Recipe Categories
+- At a future date, if there are a large volume of cocktails from each category, separate pages could be created for each one, e.g. a whole page which purely held Non-Alcoholic recipes. These pages could be available as links in the navbar and available again as their own card-panels on the main *Recipes* page.
+
+#### Saving Recipes
+- The ability for users to save recipes created by others to their profile. This would allow them to find it again easily rather than searching for it again.
+
+#### Comment on Recipes
+- The ability for users to leave comments on other recipes. This would create more of a community-feel to the site, allowing users to give feedback on recipes, whether they enjoyed it, tweaked it etc.
+
 ---
 ## <p align="center">**Technologies Used**</p>
 ### **Languages**
@@ -440,6 +452,7 @@ Heroku needs some files to be setup so that it knows what apps and dependencies 
 - All cocktail recipes submitted by me taken from [Spruce Eats](https://www.thespruceeats.com/drinks-cocktails-4162708).
 
 ### **Media**
+- Site logo created by me.
 - Hero image on *Home* and *Recipes* page by intrapixel on [Unsplash](https://unsplash.com/photos/jOpMCGHvRBA).
 - Image on *Home* Page by Helena Yankovska on [Unsplash](https://unsplash.com/photos/7EbGkOm8pWM).
 - All cocktail recipe images submitted by me taken from [Spruce Eats](https://www.thespruceeats.com/drinks-cocktails-4162708)

@@ -30,7 +30,7 @@
                 <img src="{{ recipe.cocktail_image }}" class="card-img-top" alt="{{ recipe.cocktail_name }} Image">
                 <small><i class="fas fa-camera cam-icon"></i> Credits: {{ recipe.image_credit }}</small>
             </div>
-            <div class="col-lg-6 recipe-instructions">
+            <div class="col-lg-6 recipe-ingredients">
                 <h3>Ingredients:</h3>
                 {% for line in recipe.cocktail_ingredients.splitlines() %}
                     <ul>
