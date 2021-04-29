@@ -138,18 +138,6 @@ h5 {
     text-align: center;
 }
 
-.dropdown-menu {
-    background-color: #08060E;
-    text-align: center;
-}
-.dropdown-item {
-    color: #FFFCF7;
-    font-weight: 200;
-}
-hr {
-    color: #FFFCF7;
-}
-
 /*-------------------------Footer----------------------- */
 .footer-section {
     background-color: #08060E;

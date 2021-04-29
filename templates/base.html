@@ -30,22 +30,10 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Recipes
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{{ url_for('get_cocktails') }}">Recipes</a></li><hr>
-                                <li><a class="dropdown-item" href="#">Vodka</a></li>
-                                <li><a class="dropdown-item" href="#">Gin</a></li>
-                                <li><a class="dropdown-item" href="#">Rum</a></li>
-                                <li><a class="dropdown-item" href="#">Whiskey</a></li>
-                                <li><a class="dropdown-item" href="#">Tequila</a></li>
-                                <li><a class="dropdown-item" href="#">Variety</a></li>
-                                <li><a class="dropdown-item" href="#">Non-Alcoholic</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{{ url_for('get_cocktails') }}">Recipes</a>
                         </li>
+
                         <!-- links only available to logged in users -->
                         {% if session.user %}
                             <li class="nav-item">
