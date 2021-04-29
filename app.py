@@ -162,7 +162,8 @@ def new_cocktail():
             "cocktail_ingredients": request.form.get("cocktail_ingredients"),
             "cocktail_steps": request.form.get("cocktail_steps"),
             "cocktail_image": request.form.get("cocktail_image"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "image_credit": request.form.get("image_credit")
         }
         mongo.db.recipes.insert_one(cocktail)
         # Alert user to successful recipe added
@@ -189,7 +190,8 @@ def edit_cocktail(recipe_id):
             "cocktail_ingredients": request.form.get("cocktail_ingredients"),
             "cocktail_steps": request.form.get("cocktail_steps"),
             "cocktail_image": request.form.get("cocktail_image"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "image_credit": request.form.get("image_credit")
         }
         # correct recipe will be updated using submit dictionary
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)

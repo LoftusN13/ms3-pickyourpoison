@@ -8,6 +8,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.flash-message,
+.modal {
+    text-align: center;
+}
+
 /*-------------------------Margins----------------------- */
 .container-fluid {
     padding-left: 0;
@@ -42,6 +47,46 @@ h3 {
     color: #55D7F1;
     text-shadow: .05rem .05rem .05rem #08060E;
     margin-bottom: 0;
+}
+
+.modal-header{
+    text-align: center;
+    color: #FF6B6B;
+    text-shadow: .05rem .05rem .04rem #08060E;
+    padding-top: 1rem;
+}
+
+/*-------------------------Buttons----------------------- */
+.search-btns {
+    padding-top: .5rem;
+}
+
+.search-btn,
+.add-btn,
+.del-btn {
+    background-color: #861388;
+    color: #F5F4F6;
+    border: 0 none;
+}
+.search-btn:hover,
+.add-btn:hover,
+.del-btn:hover {
+    background-color: #FF6B6B;
+}
+
+.reset-btn,
+.cancel-btn {
+    background-color: #55D7F1;
+    color: #08060E;
+    border: 0 none;
+}
+
+.reset-btn:hover,
+.cancel-btn:hover {
+    background-color: #55D7F1;
+    color: #F5F4F6;
+    text-shadow: .06rem .06rem .1rem #08060E;
+    font-weight: 500;  
 }
 
 /*-------------------------Header----------------------- */
@@ -146,36 +191,6 @@ hr {
 
 .search-section {
     padding: 1.5rem 0;
-}
-
-.search-btns {
-    padding-top: .5rem;
-}
-
-.search-btn,
-.add-btn {
-    background-color: #861388;
-    color: #F5F4F6;
-    border: 0 none;
-}
-.search-btn:hover,
-.add-btn:hover {
-    background-color: #FF6B6B;
-}
-
-.reset-btn,
-.cancel-btn {
-    background-color: #55D7F1;
-    color: #08060E;
-    border: 0 none;
-}
-
-.reset-btn:hover,
-.cancel-btn:hover {
-    background-color: #55D7F1;
-    color: #F5F4F6;
-    text-shadow: .06rem .06rem .1rem #08060E;
-    font-weight: 500;  
 }
 
 .home-links {
