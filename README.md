@@ -214,6 +214,131 @@ Other differences merely involved slight layout changes of various pages on diff
 
 ---
 ## <p align="center">**Features**</p>
+All features on the site have been put in place to make the user's experience as smooth and simple as possible. As mentioned earlier, it is designed to allow users to complete whatever task they have come to the site to do in an efficient way. It is visually consistent and responsive to keep the user comfortable. The same navigation bar and footer are present on all pages of the site to ensure navigation ease and consistency.
+
+#### Home Page
+- The landing page contains a hero image to set the overall tone of site.
+- It also contains a quick introduction to the site and its purpose so that a user knows straight away if they're in the right place.
+- A *search bar* is present allowing users to immediately search for a particular cocktail, category or ingredient.
+- A link to *All Recipes* is provided.
+- A link to *Create an Account* is provided only for users who are not currently logged in.
+
+#### Recipes Page
+- A *search bar* is present allowing users to immediately search for a particular cocktail, category or ingredient.
+- All cocktail recipes appear on this page in the form of equal-sized card panels.
+- Each panel displays the cocktail's name, photo and what kind of cocktial it is.
+- Each panel has a clickable *View Recipe button* which, when clicked, will bring the user to that cocktails's own page. 
+- If the current user is the creator of any of the cocktails, clickable icons for *Editing* and *Deleting* that cocktail will be visible beside the cocktail name in the card panel.  
+
+#### Cocktail Recipe Page
+- Each cocktail has its own recipe page displaying;
+    - Cocktail Name (cocktail_name)
+    - Type of Cocktail (category_name)
+    - Who Created the Recipe (created_by)
+    - Cocktail Picture (cocktail_image)
+    - Picture Credit (image_credit)
+    - Ingredients (cocktail_ingredients)
+    - Steps (cocktail_steps)
+- A link returning back to *All Recipes* is provided.
+- If the current user is the creator of any of the cocktails, clickable icons for *Editing* and *Deleting* that cocktail will be visible beside the cocktail name.  
+
+#### New Recipe Page
+- This page is only accessible to logged in users.
+- A form with fields for *Cocktail Name, Choose Main Alcohol* (dropdown select menu), *Ingredients, Steps, Cocktail Image URL, Cocktail Image Credit* and two buttons, *Cancel* and *Add Recipe* is provided.
+- Small labels beneath *Ingredients* and *Steps* explain to the user how to enter the fields.
+- Each field is required and upon clicking *Add Recipe*,the user will be alerted if any field is left empty or is filled out incorrectly.
+- The *Cancel* button returns the user to the main *Recipes* page.
+- The *Add Recipe* button will successfully add a cocktail recipe and return the user to the *Recipes* page with an alert confirming the addition of the new cocktail.
+    - The new cocktail can now be seen as its own card panel.
+
+#### Edit and Delete Cocktail Recipe
+- These options are only available to the creator of the recipe.
+- The *Edit* icon brings the user to the *Edit Cocktail Recipe* page;
+    - This page has a form which is pre-filled with all the current values of the recipe and two buttons, *Cancel* and *Edit Recipe*.
+    - The *Cancel* button will return the user to the *Recipes* page.
+    - The *Edit Recipe* button will successfully edit the recipe and return the user to the *Recipes* page with an alert confirming the edit of the recipe.
+- The *Delete* icon triggers a **modal** to appear;
+    - This modal asks the user if they are sure they wish to delete this recipe as it cannot be undone.
+    - It has two buttons, *Cancel* and *Delete*.
+    - The *Cancel* button will close the modal.
+    - The *Delete* button successfully deletes the recipe and will return the user to the *Recipes* page with an alert confirming the deletion.
+    - The **modal** acts as a defensive feature to ensure the user cannot accidentally delete their recipes.
+
+#### Register Page
+- This page is only accessible to users not currently logged in.
+- A form with fields for *Username*, *Password* and a *Register button* is provided.
+- Small labels beneath each field tells the user what kind of characters are accepted.
+- Users will be alerted if either field is empty, filled out incorrectly or if their username has already been taken.
+- A link to the *Log In* page is provided if the user already has an account.
+- Upon clicking the *Register button* (provided fields are successfully filled out), the user will be brought to their new profile with an alert to confirm their registration.
+
+#### Login Page
+- This page is only accessible to users not currently logged in.
+- A form with fields for *Username*, *Password* and a *Log In button* is provided.
+- Each field has a label to ensure the user knows what information is required.
+- Users will be alerted if the *Username* and/or *Password* are incorrect of if a field is empty.
+- A link to the *Register* page is provided if the user does not yet have an account.
+- Upon clicking the *Log In button* (provided fields are successfully filled out), the user will be brought to their profile with an alert to welcome them.
+
+#### Contact Page
+- This page is accessible via a link in the footer "*Contact Us Here!*"
+- A contact form with fields for *Name*, *Email*, *Message* and a *Submit button* is provided, allowing the user to contact the site owners if they wish to do so.
+- Each of the fields has a label to ensure the user knows what information is required.
+- Each field is required and upon clicking the *Submit button*, if any field is left blank, users are alerted to this via a "Please fill out this field" message which will appear beneath the empty field. This allows users to easily see and understand why they cannot submit the form.
+- Users are also alerted if the *Email Address* field is filled out incorrectly, i.e. wrong format, missing a "." or "@". If incorrect, users are alerted to this via a message which will appear beneath the field explaining what the problem is. This allows users to easily identify and fix the mistake.
+- Once the form has been successfully submitted, an alert will appear to confirm the message has been sent.
+- The site owners will receive an email containing the user's information from the contact form.
+- The user will receive an automated email to the email address they provided confirming their message has been received.
+
+#### Profile Page
+- This page is only accessible to registered users.
+- The user's name/username is provided along with a brief introduction to the profile.
+- Recipes that the user has created themselves can be found on their profile in the form of equal-sized card panels.
+- Each panel displays the cocktail's name, photo and what kind of cocktial it is.
+- Each panel has a clickable *View Recipe button* which, when clicked, will bring the user to that cocktails's own page. 
+- Each panel also has clickable icons for *Editing* and *Deleting* that cocktail which are visible beside the cocktail name.  
+
+#### Categories Page
+- This page is only accessible to **admin**.
+- Contains equal-sized card panels with the name of each category.
+- Each panel has clickable icons for *Editing* and *Deleting* that category which are visible beside the category name.
+- An *Add Category* button is provided;
+    - when clicked, **admin** is brought to the *Add Category* page.
+    - This page has a form with a field for *Category Name* and two buttons, *Cancel* and *Add Category*.
+    - The *Cancel* button will return **admin** to the *Categories* page.
+    - The *Add Category* button will successfully add a category and return **admin** to the *Categories* page with an alert confirming the addition of the new category.
+    - The new category can now be seen as its own card panel.
+- The *Edit* icon brings **admin** to the *Edit Category* page;
+    - This page has a form with a field for *Category Name* (which is pre-filled with its current value) and two buttons, *Cancel* and *Edit Category*.
+    - The *Cancel* button will return **admin** to the *Categories* page.
+    - The *Edit Category* button will successfully edit the category and return **admin** to the *Categories* page with an alert confirming the edit of the category.
+- The *Delete* icon triggers a **modal** to appear;
+    - This modal asks **admin** if they are sure they wish to delete this category as it cannot be undone.
+    - It has two buttons, *Cancel* and *Delete*.
+    - The *Cancel* button closes the modal.
+    - The *Delete* button successfully deletes the category and will return **admin** to the *Categories* page with an alert confirming the deletion.
+    - The **modal** acts as a defensive feature to ensure **admin** cannot accidentally delete categories.
+
+#### Log Out
+- Clicking *Log Out* in the navbar triggers a **modal** to appear.
+- This modal asks the user if they are sure they wish to log out.
+- It has two buttons, *Cancel* and *Logout*.
+- The *Cancel* button will return the user to whichever page they were on when they clicked.
+- The *Logout* button successfully logs the user out with an alert confirming this.
+- The **modal** acts as a defensive feature to ensure the user doesn't accidentally log out.
+
+#### Navigation Bar
+- The navigation bar at the top of the page exists on all site pages on every device, allowing users to easily navigate through the site and ensuring that there is no location within the site that they could not return from.
+- Contains a logo in the far left which contains the name of the website as well as acting as a link to the *Home* page.
+- Contains clear names of each site page (some pages dependent on who the current user is) so that the user knows what to expect from each page.
+- On smaller devices, this collapses to keep the screen uncluttered. The word "Menu" remains visible so that the user still knows that it is a navigation means.
+
+#### Footer
+- Contains a link to the *Contact* page.
+- Contains four social media links for *Facebook, Instagram, Pinterest* and *YouTube* in the form of the appropriate icons. 
+    - These icons change colour when hovered over to confirm to the user that they are links.
+    - All four links open in a new tab so that the user does not lose their way back to the site.
+    - All four links will only bring the user to the general social media platform rather than to a specific profile.
 
 ---
 ## <p align="center">**Technologies Used**</p>
