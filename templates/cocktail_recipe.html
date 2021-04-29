@@ -3,8 +3,22 @@
 
     <!-- COCKTAIL CARD -->
     <div class="card cocktail-recipe">
+        <div class="row return-link">
+            <a href="{{ url_for('get_cocktails') }}">Back to All Recipes</a>
+        </div>
         <div class="row">
-            <h2>{{ recipe.cocktail_name }}</h2>
+            <h2>{{ recipe.cocktail_name }}
+                <!-- only allow author of recipe to have the option to Edit and Delete it -->
+                {% if recipe.created_by == session["user"] %}
+                    <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <!-- triggers modal to open when clicked to prevent accidental deletions -->
+                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete_modal_{{recipe._id}}">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                {% endif %}
+            </h2>
             <p>
                 Type of Cocktail: {{ recipe.category_name }} <br>
                 <em><small>By: {{ recipe.created_by }}</small></em>
@@ -14,7 +28,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <img src="{{ recipe.cocktail_image }}" class="card-img-top" alt="{{ recipe.cocktail_name }} Image">
-                <small><i class="fas fa-camera"></i> Credits: {{ recipe.image_credit }}</small>
+                <small><i class="fas fa-camera cam-icon"></i> Credits: {{ recipe.image_credit }}</small>
             </div>
             <div class="col-lg-6 recipe-instructions">
                 <h3>Instructions:</h3>
@@ -36,13 +50,6 @@
                 {% endfor %}
             </div>
         </div>
-
-        <!-- only allow author of recipe to have the option to Edit and Delete it -->
-        {% if recipe.created_by == session["user"] %}
-            <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success">Edit</a>
-            <!-- triggers modal to open when clicked to prevent accidental deletions -->
-            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete_modal_{{recipe._id}}">Delete</a>
-        {% endif %}
         
         <!-- DELETE-COCKTAIL CONFIRMATION MODAL -->
         <div class="modal fade" id="delete_modal_{{recipe._id}}" aria-labelledby="Confirm Deletion Modal" aria-hidden="true">

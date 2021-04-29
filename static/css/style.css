@@ -245,11 +245,31 @@ h5 {
     text-align: center;
 }
 
+.return-link {
+    text-align: left;
+}
+
+.cocktail-recipe .btn-danger {
+    background-color: #D4214E;
+    border-radius: 50%;
+    border: 0 none;
+}
+
+.cocktail-recipe .btn-success {
+    background-color: #62A763;
+    border-radius: 50%;
+    border: 0 none;
+}
+
+.cocktail-recipe i:hover {
+    font-size: 1.2rem;
+}
+
 .cocktail-recipe li {
     text-align: left;    
 }
 
-.cocktail-recipe i {
+.cocktail-recipe .cam-icon {
     color: #861388;
 }
 
