@@ -27,7 +27,7 @@
                     <div class="card cocktail-card h-100">
                         <img src="{{ recipe.cocktail_image }}" class="card-img-top h-100" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">{{ recipe.cocktail_name }}
+                            <h5 class="card-title">{{ recipe.cocktail_name }} <br>
                                 <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success btn-sm">
                                     <i class="fas fa-edit"></i>
                                 </a>

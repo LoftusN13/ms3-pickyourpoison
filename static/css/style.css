@@ -106,9 +106,13 @@ h5 {
 }
 
 .navbar {
-    padding: .5rem;
+    padding: .4rem;
     background-color: #08060E;
-    font-size: 1rem;
+    font-size: .8rem;
+}
+.navbar .btn {
+    padding: .4rem;
+    font-size: .8rem;
 }
 
 .navbar-brand {
@@ -116,21 +120,28 @@ h5 {
 }
 
 .nav-link {
-    color: #FFFCF7;
+    color: #F5F4F6;
     letter-spacing: .2rem;
 }
 .nav-link:hover {
-    color: #82ECF7;
+    color: #55D7F1;
 }
 
 .nav-item .active {
     font-weight: 600;
+    color: #55D7F1;
 }
 
+.nav-item .active:hover {
+    color: #F5F4F6;
+}
+
+.navbar button {
+    padding-right: 1.5rem;
+}
 .navbar-toggler-icon {
-    color: #FFFCF7;
+    color: #F5F4F6;
     font-size: 1rem;
-    padding-right: .5rem;
 }
 
 .navbar-collapse {
@@ -159,7 +170,7 @@ h5 {
 .footer-section a i {
     color: #F5F4F6;
     font-size: 1.7rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     border: none;
 }
 .footer-section a i:hover {
@@ -210,7 +221,7 @@ h5 {
 /*-------------------------Cocktails Page----------------------- */
 .cocktail-card-panels {
     text-align: center;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem .5rem;
 }
 
 .cocktail-card-panels i:hover {
@@ -271,6 +282,10 @@ h5 {
 
 .cocktail-recipe li {
     text-align: left;    
+}
+
+.cocktail-recipe h2 {
+    padding: 1rem;
 }
 
 .cocktail-recipe .cam-icon {
@@ -400,3 +415,48 @@ h5 {
 }
 
 /*-------------------------Media Queries---------------------- */
+@media only screen and (min-width: 360px) {
+    .footer-section a i {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    .cocktail-recipe {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+
+@media only screen and (min-width: 992px) {
+    .home-content {
+        padding-top: 1rem;
+        padding-left: 2rem;
+    }
+    .navbar {
+        padding: .5rem;
+        font-size: 1rem;
+    }
+    .navbar .btn {
+        padding: .5rem;
+        font-size: 1rem;
+    }
+    .cocktail-recipe {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .cocktail-recipe h3 {
+        padding-top: 1rem;
+    }
+    .recipe-ingredients {
+        padding-bottom: 0;
+    }
+    .cocktail-img {
+        padding-top: 1.3rem;
+    }
+}
