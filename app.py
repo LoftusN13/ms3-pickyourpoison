@@ -168,6 +168,8 @@ def new_cocktail():
         mongo.db.recipes.insert_one(cocktail)
         # Alert user to successful recipe added
         flash("Amazing! Another delicious cocktail added!")
+        return redirect(url_for("get_cocktails"))
+
     # Alcohol categories pulled from db for select menu
     categories = mongo.db.categories.find()
     return render_template("new_cocktail.html", categories=categories)
