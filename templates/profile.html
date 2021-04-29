@@ -2,24 +2,30 @@
 {% block content %}
     <!-- PROFILE CARD PANEL -->
     <div class="row justify-content-center profile-card">
-        <div class="card col-8">
+        <div class="card col-md-8">
             <div class="card-body">
-                <h3 class="card-title">{{ username }}'s Profile</h3>
-                <div class="row">Username: {{ username }} </div>
-                <div class="row"></div>
+                <h1 class="card-title">{{ username }}'s Profile</h1>
+                <div class="row justify-content-center"><em>Username: {{ username }}</em></div>
+                <div class="row">
+                    <p>
+                        Hey {{ username }}! Welcome to your profile! <br>
+                        Here you'll find all the cocktail recipes that you've already created! <br>
+                        Maybe you'll be inspired to create some more!
+                    </p>
+                </div>
             </div>
         </div>
     </div>
     <!-- End of PROFILE CARD PANEL -->
 
     <div class="row cocktail-card-panels">
-        <h3 class="card-title">{{ username }}'s Cocktails</h3>
+        <h2 class="card-title">Your Cocktails</h2>
         {% for recipe in recipes %}
             <!-- only displays recipes created by current user -->
             {% if recipe.created_by == session["user"] %}
-                <div class="col-md-4">
-                    <div class="card cocktail-card">
-                        <img src="{{ recipe.cocktail_image }}" class="card-img-top" alt="">
+                <div class="col-md-4 mb-3">
+                    <div class="card cocktail-card h-100">
+                        <img src="{{ recipe.cocktail_image }}" class="card-img-top h-100" alt="">
                         <div class="card-body">
                             <h5 class="card-title">{{ recipe.cocktail_name }}
                                 <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success btn-sm">
