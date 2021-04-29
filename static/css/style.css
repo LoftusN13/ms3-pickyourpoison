@@ -78,6 +78,8 @@ h5 {
 .add-btn:hover,
 .del-btn:hover {
     background-color: #FF6B6B;
+    color: #F5F4F6;
+    text-shadow: .06rem .06rem .1rem #08060E;
 }
 
 .reset-btn,
@@ -219,6 +221,22 @@ hr {
     text-align: center;
 }
 
+.cocktail-card-panels i:hover {
+    font-size: 1rem;
+}
+
+.cocktail-card-panels .btn-danger {
+    background-color: #D4214E;
+    border-radius: 50%;
+    border: 0 none;
+}
+
+.cocktail-card-panels .btn-success {
+    background-color: #62A763;
+    border-radius: 50%;
+    border: 0 none;
+}
+
 .view-btn {
     background-color: #55D7F1;
     color: #08060E;
@@ -265,6 +283,27 @@ hr {
 .recipe-instructions ul {
     padding: .2rem 2rem;
     margin-bottom: 0;
+}
+
+/*-------------------------Categories Page----------------------- */
+.category-card-panels {
+    text-align: center;
+}
+
+.category-card-panels i:hover {
+    font-size: 1rem;
+}
+
+.category-card-panels .btn-danger {
+    background-color: #D4214E;
+    border-radius: 50%;
+    border: 0 none;
+}
+
+.category-card-panels .btn-success {
+    background-color: #62A763;
+    border-radius: 50%;
+    border: 0 none;
 }
 
 /*-------------------------Form Pages----------------------- */

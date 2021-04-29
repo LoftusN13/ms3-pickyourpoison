@@ -2,16 +2,21 @@
 {% block content %}
 
     <a href="{{ url_for('add_category') }}" class="btn btn-primary">Add Category</a>
-    <div class="row">
+    <div class="row category-card-panels">
         {% for category in categories %}
             <div class="col-md-4">
                 <div class="card category-card">
                     <img src="" class="card-img-top" alt="">
                     <div class="card-body">
-                        <h5 class="card-title">{{ category.category_name }}</h5>
-                    </div>
-                     <a href="{{ url_for('edit_category',category_id=category._id) }}" class="btn btn-success">Edit</a>
-                     <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete_modal_{{category._id}}">Delete</a>  
+                        <h5 class="card-title">{{ category.category_name }}
+                            <a href="{{ url_for('edit_category',category_id=category._id) }}" class="btn btn-success btn-sm">
+                                <i class="fas fa-edit"></i>
+                             </a>
+                             <a class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete_modal_{{category._id}}">
+                                <i class="fas fa-trash-alt"></i>
+                             </a> 
+                        </h5>
+                    </div> 
                 </div>
             </div>
 
@@ -32,7 +37,7 @@
                             <!-- cancel deletion; closes modal -->
                             <button type="button" class="btn btn-secondary cancel-btn" data-bs-dismiss="modal">Cancel</button>
                             <!-- confirms deletion of category -->
-                            <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn btn-danger del-btn">Delete</a> 
+                            <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn del-btn">Delete</a> 
                         </div>
                     </div>
                 </div>
