@@ -2,7 +2,7 @@
 
 # <p align="center">**MS3: Pick Your Poison**</p>
 
- ### View the live project [here.]()
+ ### View the live project [here.](https://ms3-pickyourpoison.herokuapp.com/)
 
 This website has been created as my submission for Milestone Project 3 for the Code Institute. *Pick Your Poison* is a collaborative cocktail recipe site designed to allow users to search for and discover new cocktails as well as sharing their own recipes. Users can create an account which allows them to upload and edit their own cocktails. Non-members can also search for and browse the cocktail recipes. The site is designed to be user-friendly and visually appealing while also being responsive across a range of devices.
 
@@ -190,17 +190,112 @@ All wireframes can be found below;
 ---
 ## <p align="center">**Technologies Used**</p>
 ### **Languages**
+- HTML
+- CSS
+- JavaScript
+- Python (including the following as seen in this project's requirements.txt file);
+    - click==7.1.2
+    - dnspython==2.1.0
+    - Flask==1.1.2
+    - Flask-PyMongo==2.3.0
+    - itsdangerous==1.1.0
+    - pymongo==3.11.3
+    - Werkzeug==1.0.1
 
 ### **Technologies**
+- [Adobe Fonts](https://fonts.adobe.com/fonts/al-fresco) - used Al Fresco font for site logo and for image on *Recipes* page.
+- [Adobe Photoshop](https://www.adobe.com/ie/products/illustrator.html) - used to create the site logo and to edit images on the site.
+- [Am I Responsive?](http://ami.responsivedesign.is/) - used to create the multi-device image found at the top of this file.
+- [Balsamiq](https://balsamiq.com/) - used to create wireframes.
+- [Bootstrap](https://getbootstrap.com/) - used throughout the site for responsive layouts and styling.
+- [Coolors](https://coolors.co/) - used for choosing colour scheme and for contrast-checking of chosen colours.
+- [EmailJS](https://www.emailjs.com/) - used to set up email template for submission of *Contact Form.*
+- [Font Awesome](https://fontawesome.com/) - used for all icons seen on the site.
+- [Git](https://git-scm.com/) - version control software used to commit and push code to GitHub.
+- [GitHub](https://github.com/) - hosting site used to store the source code of the site.
+- [GitPod](https://www.gitpod.io/) - IDE used to develop the site.
+- [Google Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - used for inspecting various page elements and identifying any layout issues/bugs. 
+- [Google Fonts](https://fonts.google.com/specimen/Montserrat) - used to import Montserrat font.
+- [Heroku](https://www.heroku.com/) - used to deploy live website.
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - used for templating language.
+- [MongoDB](https://www.mongodb.com/2) - used to create document-based collections used as the data storage for the site.
+- [TingPNG](https://tinypng.com/) - used to resize some images for web.
 
 ---
 ## <p align="center">**Testing**</p>
+Testing information and content for this project can be found in the [separate TESTING.md](TESTING.md) file.
 
 ---
 ## <p align="center">**Deployment**</p>
+### Creating the Project
+This project used the Code Institute's student [template](https://github.com/Code-Institute-Org/gitpod-full-template). A new repository named **ms3-pickyourpoison**
+was created which included all branches from the template. The project was developed using the IDE [GitPod](https://www.gitpod.io/). Version control software [Git](https://git-scm.com/) was used to commit and push the code to 
+[GitHub](https://github.com/) where it was stored. The following commands were used for this:
+- **git add** ***filename/directory*** - This command adds files/directories to the staging area to be committed.
+- **git commit -m** *"message here"* - This command commits files/directories to the repository. Commit messages should clearly explain the update being committed.
+- **git push** - This command pushes all committed updates/changes into the GitHub repository.
+
+### Deploying to Heroku
+Heroku needs some files to be setup so that it knows what apps and dependencies are needed to run the app.
+-  use the command **"pip3 freeze --local > requirements.txt"**.
+- use the command **"echo web: python app.py > Procfile"** (ensuring you enter a capital P). 
+- Add, commit and push.
+
+#### Create Heroku App:
+- Create an account or login to [Heroku](https://www.heroku.com/).
+- Click on the *New* button on the top right of your dashboard.
+- Select **Create new app**.
+- Enter your new unique app name.
+- Choose your region.
+- Select **Create app**.
+
+#### Connect to GitHub Repository:
+- On your new app's page, navigate to the *Deploy* tab.
+- Under *Deployment method*, select **GitHub**.
+- Under *Connect to GitHub* (and making sure your GitHub profile is displayed), enter the name of your repository and click **Search**.
+- Once your repo has been found, click **Connect**.
+
+#### Set Environment Variables:
+- Navigate to your app's *Settings* tab.
+- Under *Config Vars*, click **Reveal Config Vars**.
+- You'll need to **add** the following key:value items;
+    - key: IP, value: 0.0.0.0
+    - key: PORT, value: 5000
+    - key: MONGO_DBNAME, value: (database name you want to connect to)
+    - key: MONGO_URI, value: (accessed by following the steps below)
+        - Login to [MongoDB](https://www.mongodb.com/2).
+        - Under *Data Storage*, click **Clusters**.
+        - Click **Connect** on the cluster you want. 
+        - Click **Connect your application**.
+        - Copy the link there, replacing < password > with your own one for the database access page, and the database name with the collection/database you want to collect to.
+    - key: SECRET_KEY, value: (your own secret key)
+        - custom and random sequence of characters required for maintaining security.
+        - generated from [RandomKeygen](https://randomkeygen.com/) for example.
+
+#### Automatic Deployment:
+- Navigate back to your app's *Deployment* tab.
+- Under *Automatic deploys*, select the branch you wish to deploy from.
+- Click **Enable Automatic Deploys**.
+
+### Deploying Locally
+
 
 ---
 ## <p align="center">**Credits**</p>
 ### **Content**
+- All non-recipe content written by me.
+- All cocktail recipes submitted by me taken from [Spruce Eats](https://www.thespruceeats.com/drinks-cocktails-4162708).
+
+### **Media**
+- Hero image on *Home* and *Recipes* page by intrapixel on [Unsplash](https://unsplash.com/photos/jOpMCGHvRBA).
+- Image on *Home* Page by Helena Yankovska on [Unsplash](https://unsplash.com/photos/7EbGkOm8pWM).
+- All cocktail recipe images submitted by me taken from [Spruce Eats](https://www.thespruceeats.com/drinks-cocktails-4162708)
+
 ### **Code**
+- Code Institute's EmailJS module was used to help set up the contact form submission.
+- [Stack Overflow](https://stackoverflow.com/) to ensure all cocktail card panels are the same height.
+- Code Institute's Task Manager App module was a useful resource for project setup.
+ 
+
 ### **Acknowledgements**
+- A big thank you to Scott and Kevin from Tutor Support who helped me solve an issue with Gitpod/GitHub which was preventing me from pushing code to GitHub.
