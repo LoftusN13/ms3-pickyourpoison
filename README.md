@@ -48,7 +48,7 @@ The target audience for this site would be adults who have a keen interest in mi
 #### User Stories
 All Users
 - As a user, I want to easily navigate through the site.
-- As a user, I want the site to be responsive on whichever device and/or browser I'm viewing it on.
+- As a user, I want the site to be responsive on whichever device I'm viewing it on.
 - As a user, I want to easily contact the site owners with any questions I might have or problems I may encounter.
 - As a user, I want to search for and browse different cocktail recipes.
 
