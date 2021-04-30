@@ -1,4 +1,4 @@
-<p align="center"><img src="static/images/logo.jpg" width="60%"/></p>
+<p align="center"><img src="static/images/logo.jpg" width="60%" alt="Pick Your Poison Logo"/></p>
 
 # <p align="center">**MS3: Pick Your Poison**</p>
 
@@ -26,11 +26,11 @@
     - On first check, I was alerted to a div that was missing a closing tag. 
     - I fixed this and ran it through again. No further errors reported.
 
-<p align="center"><img src="documentation/html-validation.png" width="50%"/></p>
+<p align="center"><img src="documentation/testing/html-validation.png" width="50%" alt="HTML Code Validation Results"/></p>
 
 - All CSS code was checked and validated with [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/). No errors reported.
 
-<p align="center"><img src="documentation/css-validation.png" width="50%"/></p>
+<p align="center"><img src="documentation/testing/css-validation.png" width="50%" alt="CSS Code Validation Results"/></p>
 
 - JavaScript code was passed through [JSHint](https://jshint.com/) with no major errors.
 - Python code was passed through [PEP8 online](http://pep8online.com/) to ensure compliancy. 
@@ -54,7 +54,7 @@
     - all icons contain a description for screen-reader users.
 - I also tested the site's accessibility using [Lighthouse](https://developers.google.com/web/tools/lighthouse) in [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
 
-<p align="center"><img src="documentation/accessibility.png" width="50%"/></p>
+<p align="center"><img src="documentation/testing/accessibility.png" width="50%" alt="Accessibility Results Showing 98%"/></p>
 
 - I noted that the contrast of some headings could be improved at a later date.
 
@@ -89,28 +89,45 @@ I manually tested the site on several different browsers to ensure that everythi
 I performed manual testing on the *Contact Form* on the site to ensure that it functioned as it should.
 - The following steps were followed for this testing procedure;
     - Navigate to the *Contact* page via the "Contact Us Here!" link contained in the footer on every page of the site.
+     <p align="center"><img src="documentation/testing/contact.jpg" width="70%" alt="Contact Us Here Link"/></p>
+
     - Attempt to submit the form, leaving one field empty each time.
     - Make note of the error alert that appears (as seen in the image below).
     - Attempt to submit the form with an incorrect *Email Address* format.
     - Make note of the error alert that appears (as seen in the image below).
+    <p align="center"><img src="documentation/testing/contact-test.jpg" width="70%" alt="Contact Form Testing"/></p>
+
     - Fill in all form fields correctly (with own email address) and submit.
     - Make note of the alert that appears upon submitting the form successfully (as seen in the image below).
+    <p align="center"><img src="documentation/testing/contact-msg.jpg" width="70%" alt="Contact Form Testing"/></p>
+
     - Check the site owner's inbox to ensure that the contact form details were received correctly (as seen in the image below).
     - Check the email inbox of the email address provided in the form to ensure the automated response was received (as seen in the image below).
+    <p align="center"><img src="documentation/testing/email.jpg" width="70%" alt="Automated Email Response"/></p>
+
 - From this testing I concluded that the *Contact Form* is functional and performs its tasks correctly.
 
-
 ### **CRUD**
+For my testing I wanted to ensure that all users were able to Create, Read, Update and Delete cocktail recipes.
+- I manually tested this by logging in as a registered user, creating a new recipe, viewing/reading this recipe, editing this recipe and finally deleting this recipe.
+
+I also wanted to ensure that the admin was able to Create, Read, Update and Delete categories.
+- I manually tested this by logging in as admin, creating a new category, viewing this category, editing this category and finally deleting this category. 
+
+From this testing I am satisfied that the site is functional in this regard. For further testing of the above points please see User Stories below.
 
 ### **Testing User Stories**
-All Users
+**All Users**
+
 - **"As a user, I want to easily navigate through the site."**
     - Regardless of what page the user is on, they can always find the navigation bar at the top of each page.
-    - The user can always click on the logo image at the top of every page to return them to the *Home* Page.
+    - The user can always click on the logo image at the top of every page to return them to the *Home* page.
     - The user can always see clear names of each page so they know where to navigate to for the information or content they're looking for.
         - For All Users: *Home, Recipes, Register, Login*.
         - For Registered Users: *Home, Recipes, New Recipe, Profile, Log Out*.
         - For Admin: *Home, Recipes, New Recipe, Profile, Categories, Log Out*.
+    <p align="center"><img src="documentation/testing/navbar.jpg" width="70%" alt="Automated Email Response"/></p>
+
     - The user can easily identify links, as a means of navigation, as they change colour and/or change size when hovered over.
     - All of the above points are true across all devices; mobile, tablet, desktop etc.
 
@@ -119,10 +136,13 @@ All Users
     - All content can be clearly seen aross devices.
     - The user will find the site visually consistent throughout.
 
+    <p align="center"><img src="documentation/mockup.png" width="70%" alt="Multi Device Mockup"/></p>
+
 - **"As a user, I want to easily contact the site owners with any questions I might have or problems I may encounter."**
     - The user can click on a link located in the footer (on every page of the site) to go directly to the *Contact* page.
         - This link is in the form of "*Contact Us Here!*", which lets the user know where they can expect to be brought to.
         - This link changes size and colour when hovered over to further reinforce to the user that it is a clickable link.
+        <p align="center"><img src="documentation/testing/contact1.png" width="50%" alt="Contact Us Here Link"/></p>
 
     - On the *Contact* page the user will immediately find a contact form to fill out;
         - This form allows the user to enter their name, an email address for the site owner to respond to, and their message/question.
@@ -137,21 +157,39 @@ All Users
     - The user can click on a link located near the bottom of the *Home* page to go directly to the *Recipes* page.
         - This link is in the form of "*Click **Here** To View All Cocktail Recipes*", which lets the user know where they can expect to be brought to.
         - This link changes size and colour when hovered over to further reinforce to the user that it is a clickable link.
+        <p align="center"><img src="documentation/testing/recipes.jpg" width="70%" alt="Recipes Links"/></p>
+
     - On the *Recipes* page the user will find all cocktail recipes that have been added to the site. 
         - The user can scroll down this page browsing recipes, seeing each recipe in its own panel.
-        - The user will see each cocktail's name, image, cocktail type and a *View Recipe* button.
+        <p align="center"><img src="documentation/testing/recipe-panels.jpg" width="70%" alt="Cocktail Recipe Panels"/></p>
+
+        - On each panel the user will see each cocktail's name, image, cocktail type and a *View Recipe* button.
+            - If the user is the creator of that recipe they will also see icon buttons for *Edit* and *Delete* below the cocktail name in the panel.
+            <p align="center"><img src="documentation/testing/recipe-editdel.jpg" width="50%" alt="Cocktail Recipe Edit and Delete Buttons"/></p>
+
         - The *View Recipe* button changes colour when hovered over to reinforce to the user that it is clickable.
-        - When clicked the user is brought to the page for that particular recipe where they'll find further information about the recipe including *Ingredients* and *Steps*
-        - The user can return to the previous *Recipes* page via a link on the to left of the page *"Back to All Recipes"*.
+        <p align="center"><img src="documentation/testing/recipe-btn.png" width="50%" alt="Frostbite Cocktail View Recipe Button"/></p>
+
+        - When clicked, the user is brought to the page for that particular recipe where they'll find further information about the recipe including *Ingredients* and *Steps*.
+            - If the user is the creator of this recipe, they will also see icon buttons for *Edit* and *Delete* below the cocktail name.
+
+         <p align="center"><img src="documentation/testing/recipe-pg.jpeg" width="70%" alt="Zombie Coctail Recipe Page"/></p>
+
+        - The user can return to the previous *Recipes* page via a link on the top left of the page *"Back to All Recipes"*.
     - On the *Home* and *Recipes* pages, the user can find a *search bar*.
         - Within the search bar the user can see a label stating "Search for a cocktail or ingredient...".
+        <p align="center"><img src="documentation/testing/search.jpg" width="60%" alt="Search Bar"/></p>
+
         - The user can enter whatever they are looking for, "Non-Alcoholic" for example, and then press enter or click the *Search* button
         - If there are cocktails matching their search, the user will be brought to the *Recipes* page with the cocktail recipes filtered according to their search.
-        - The user can click the *Reset* button under the *search bar* to reset the search and return all recipes.
-        - If there are no cocktails matching their search, the user will be alerted to this and encouraged to search for something else. 
+        <p align="center"><img src="documentation/testing/search-results.jpeg" width="60%" alt="Non-Alcoholic Cocktails"/></p>
 
+        - The user can click the *Reset* button under the *search bar* to reset the search and return all recipes.
+        - If there are no cocktails matching their search, the user will be alerted to this and encouraged to search for something else.
+        <p align="center"><img src="documentation/testing/no-search.jpeg" width="60%" alt="No Results Found Alert"/></p>
 
 **First-Time User/Non Member**
+
 - **"As a first-time user, I want to immediately understand the purpose of the site."**
     - Upon landing on the site the user can immediately find an introduction the the site below the hero image.
     - The hero image itself helps to set the tone of the site and contains the word *"Cocktail"* which further emphasises the site purpose.
@@ -168,6 +206,9 @@ All Users
     - The user can click on a link located near the bottom of the *Log In* page to go directly to the *Register* page.
         - This link is within a message stating "*Don't Have an Account?* **Register Here!**", which lets the user know where they can expect to be brought to.
         - This link changes size and colour when hovered over to further reinforce to the user that it is a clickable link.
+
+    <p align="center"><img src="documentation/testing/register.jpg" width="70%" alt="No Results Found Alert"/></p>
+
     - On the *Register* page the user will find a Registration form to be filled out;
         - This form allows the user to choose a *Username* and *Password*.
         - Descriptions under each form field tell the user what characters are accepted to keep things clear and simple.
@@ -176,7 +217,7 @@ All Users
         - Upon successful registration, the newly registered user will be brought directly to their new profile.
         - The newly registered user will be alerted to their successful registration.
 
-Registered Users
+**Registered Users**
 
 - **"As a registered user, I want to easily log in with my username and password."**
     - The user can click on *"Log In"* in the navigation bar to go directly to the *Log In* Page.
@@ -208,10 +249,26 @@ Registered Users
     - The user can click the *Cancel* button if they do not wish to add the recipe and this will bring them back to the *Recipes* page.
 
 - **"As a registered user, I want to easily edit or delete my own cocktail recipes."**
+   - The user can click on the *Edit* icon button of any of their own recipes to go directly to the *Edit Cocktail Recipe* Page.
+        - This button is accessible beneath the Cocktail Name on the recipe card panels found on the *Recipes* page, the user's *Profile* page and on each cocktails own recipe page.
+    - On the *Edit Cocktail Recipe* page the user will find a form that is pre-filled with the recipe's current values.
+        - The user will be alerted if they try to submit the form with any field empty.
+        - Upon a successful edit of the recipe the user will be brought to the *Recipes* page.
+        - The user will be alerted to the successful recipe edit. 
+        - The user can click the *Cancel* button if they do not wish to edit the recipe and this will bring them back to the *Recipes* page.
+    - The user can click on the *Delete* icon button of any of their own recipes to activate a *delete modal*.
+        - This button is accessible beneath the Cocktail Name on the recipe card panels found on the *Recipes* page, the user's *Profile* page and on each cocktails own recipe page.
+        - The *modal* acts as a defence to prevent the user from accidentally deleting their recipes.
+        - The *modal* will ask the user if they are sure they wish to delete their recipe.
+        - The user can click the *Cancel* button which will close the modal and **not** delete the recipe.
+        - The user can click the *Delete* button which will successfully delete the recipe.
+        - The user will be alerted to a successful deletion and will be brought to the *Recipes* page.
 
 - **"As a registered user, I want to easily view my profile"**
-     - The user can click on *Profile* in the navigation bar to go directly to their profile.
+    - The user can click on *Profile* in the navigation bar to go directly to their profile.
         - This is true on both full and collapsed menus.
+    - The user will see all cocktails that they have created seeing each recipe in its own panel. 
+    - The user will see icon buttons for *Edit* and *Delete* below the cocktail name in the panel.
 
 - **"As a registered user, I want to easily log out from my account."**
     - The user can click on *Log Out* in the navigation bar to activate a *logout modal*.
@@ -232,5 +289,30 @@ Registered Users
         - Successful Logout
         - Contact Form Sent 
 
-Admin User
+**Admin User**
+
 - **"As the admin, I want to be the only user who can add or edit cocktail categories."**
+    - The admin can click on *Categories* in the navigation bar to go directly to the *Categories* page.
+        - This link is only available and accessible to the admin.
+    - The admin will find an *Add Category* button which changes colour when hovered over to emphasise to the admin that it is a clickable link.
+        - When clicked, the admin will be brought to the *Add Category* page.
+        - On this page, the admin will find a small form with just one field for *Category Name* and two buttons, *Cancel* and *Add Category*.
+        - The admin will be alerted if they try to submit the form with the field empty.
+        - Upon successful submission of the form, the admin will be returned to the *Categories* page.
+        - The admin will be alerted to the successful addition.
+        - The admin can click the *Cancel* button if they do not wish to add the category and this will bring them back to the *Categories* page.
+    - On the *Categories* page the admin will find all categories that have been added to the site. 
+        - Each category is within its own panel with icon buttons for *Edit* and *Delete* beside each category name.
+    - The admin can click on the *Edit* icon button to go directly to the *Edit Category* Page.
+        - On the *Edit Category* page the admin will find a form that is pre-filled with the category's current value.
+        - The admin will be alerted if they try to submit the form with any field empty.
+        - Upon a successful edit of the category the admin will be brought to the *Categories* page.
+        - The admin will be alerted to the successful category edit. 
+        - The admin can click the *Cancel* button if they do not wish to edit the category and this will bring them back to the *Categories* page.
+    - The user can click on the *Delete* icon button of any of the categories to activate a *delete modal*.
+        - The *modal* acts as a defence to prevent the admin from accidentally deleting the category.
+        - The *modal* will ask the admin if they are sure they wish to delete the category.
+        - The admin can click the *Cancel* button which will close the modal and **not** delete the category.
+        - The admin can click the *Delete* button which will successfully delete the category.
+        - The admin will be alerted to a successful deletion and will be brought to the *Categories* page.
+

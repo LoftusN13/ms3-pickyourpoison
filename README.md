@@ -1,4 +1,4 @@
-<p align="center"><img src="static/images/logo.jpg" width="60%"/></p>
+<p align="center"><img src="static/images/logo.jpg" width="60%" alt="Pick Your Poison Logo"/></p>
 
 # <p align="center">**MS3: Pick Your Poison**</p>
 
@@ -7,7 +7,7 @@
 This website has been created as my submission for Milestone Project 3 for the Code Institute. *Pick Your Poison* is a collaborative cocktail recipe site designed to allow users to search for and discover new cocktails as well as sharing their own recipes. Users can create an account which allows them to upload and edit their own cocktails. Non-members can also search for and browse the cocktail recipes. The site is designed to be user-friendly and visually appealing while also being responsive across a range of devices.
 
 ---
-
+![Multi-Device Mockup](documentation/mockup.png)
 ## Contents
 - [**User Experience (UX)**](#ux)
     - [Strategy](#strategy)
@@ -19,7 +19,7 @@ This website has been created as my submission for Milestone Project 3 for the C
     - [Skeleton](#skeleton)
     - [Surface](#surface)
         - [Design](#design)
-        - [Colours](#colours)
+        - [Colour](#colour)
         - [Fonts and Icons](#fonts-and-icons)
         - [Final Design Changes](#final-design-changes)
  - [**Features**](#features)
@@ -370,7 +370,6 @@ All features on the site have been put in place to make the user's experience as
 ### **Technologies**
 - [Adobe Fonts](https://fonts.adobe.com/fonts/al-fresco) - used Al Fresco font for site logo and for image on *Recipes* page.
 - [Adobe Photoshop](https://www.adobe.com/ie/products/illustrator.html) - used to create the site logo and to edit images on the site.
-- [Am I Responsive?](http://ami.responsivedesign.is/) - used to create the multi-device image found at the top of this file.
 - [Balsamiq](https://balsamiq.com/) - used to create wireframes.
 - [Bootstrap](https://getbootstrap.com/) - used throughout the site for responsive layouts and styling.
 - [Coolors](https://coolors.co/) - used for choosing colour scheme and for contrast-checking of chosen colours.
@@ -384,6 +383,7 @@ All features on the site have been put in place to make the user's experience as
 - [Heroku](https://www.heroku.com/) - used to deploy live website.
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - used for templating language.
 - [MongoDB](https://www.mongodb.com/2) - used to create document-based collections used as the data storage for the site.
+- [Techsini](http://techsini.com/multi-mockup/index.php) - used to create the multi-device image found at the top of this file.
 - [TingPNG](https://tinypng.com/) - used to resize some images for web.
 
 ---
