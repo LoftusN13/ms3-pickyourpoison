@@ -201,6 +201,7 @@ def edit_cocktail(recipe_id):
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         # Alert user to successful recipe edit
         flash("All done! Your delicious recipe has been edited!")
+        return redirect(url_for("get_cocktails"))
 
     # searches db for the correct cocktail recipe by id
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
