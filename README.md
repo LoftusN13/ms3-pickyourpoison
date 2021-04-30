@@ -218,21 +218,21 @@ Other differences merely involved slight layout changes of various pages on diff
 ## <p align="center">**Features**</p>
 All features on the site have been put in place to make the user's experience as smooth and simple as possible. As mentioned earlier, it is designed to allow users to complete whatever task they have come to the site to do in an efficient way. It is visually consistent and responsive to keep the user comfortable. The same navigation bar and footer are present on all pages of the site to ensure navigation ease and consistency. All links change appearance when hovered over to confirm they are links.
 
-#### Home Page
+#### **Home Page**
 - The landing page contains a hero image to set the overall tone of site.
 - It also contains a quick introduction to the site and its purpose so that a user knows straight away if they're in the right place.
 - A *search bar* is present allowing users to immediately search for a particular cocktail, category or ingredient.
 - A link to *All Recipes* is provided.
 - A link to *Create an Account* is provided only for users who are not currently logged in.
 
-#### Recipes Page
+#### **Recipes Page**
 - A *search bar* is present allowing users to immediately search for a particular cocktail, category or ingredient.
 - All cocktail recipes appear on this page in the form of equal-sized card panels.
 - Each panel displays the cocktail's name, photo and what kind of cocktial it is.
 - Each panel has a clickable *View Recipe button* which, when clicked, will bring the user to that cocktails's own page. 
 - If the current user is the creator of any of the cocktails, clickable icons for *Editing* and *Deleting* that cocktail will be visible beside the cocktail name in the card panel.  
 
-#### Cocktail Recipe Page
+#### **Cocktail Recipe Page**
 - Each cocktail has its own recipe page displaying;
     - Cocktail Name (cocktail_name)
     - Type of Cocktail (category_name)
@@ -244,7 +244,7 @@ All features on the site have been put in place to make the user's experience as
 - A link returning back to *All Recipes* is provided.
 - If the current user is the creator of any of the cocktails, clickable icons for *Editing* and *Deleting* that cocktail will be visible beside the cocktail name.  
 
-#### New Recipe Page
+#### **New Recipe Page**
 - This page is only accessible to logged in users.
 - A form with fields for *Cocktail Name, Choose Main Alcohol* (dropdown select menu), *Ingredients, Steps, Cocktail Image URL, Cocktail Image Credit* and two buttons, *Cancel* and *Add Recipe* is provided.
 - Small labels beneath *Ingredients* and *Steps* explain to the user how to enter the fields.
@@ -253,7 +253,7 @@ All features on the site have been put in place to make the user's experience as
 - The *Add Recipe* button will successfully add a cocktail recipe and return the user to the *Recipes* page with an alert confirming the addition of the new cocktail.
     - The new cocktail can now be seen as its own card panel.
 
-#### Edit and Delete Cocktail Recipe
+#### **Edit and Delete Cocktail Recipe**
 - These options are only available to the creator of the recipe.
 - The *Edit* icon brings the user to the *Edit Cocktail Recipe* page;
     - This page has a form which is pre-filled with all the current values of the recipe and two buttons, *Cancel* and *Edit Recipe*.
@@ -266,7 +266,7 @@ All features on the site have been put in place to make the user's experience as
     - The *Delete* button successfully deletes the recipe and will return the user to the *Recipes* page with an alert confirming the deletion.
     - The **modal** acts as a defensive feature to ensure the user cannot accidentally delete their recipes.
 
-#### Register Page
+#### **Register Page**
 - This page is only accessible to users not currently logged in.
 - A form with fields for *Username*, *Password* and a *Register button* is provided.
 - Small labels beneath each field tells the user what kind of characters are accepted.
@@ -274,7 +274,7 @@ All features on the site have been put in place to make the user's experience as
 - A link to the *Log In* page is provided if the user already has an account.
 - Upon clicking the *Register button* (provided fields are successfully filled out), the user will be brought to their new profile with an alert to confirm their registration.
 
-#### Login Page
+#### **Login Page**
 - This page is only accessible to users not currently logged in.
 - A form with fields for *Username*, *Password* and a *Log In button* is provided.
 - Each field has a label to ensure the user knows what information is required.
@@ -282,7 +282,7 @@ All features on the site have been put in place to make the user's experience as
 - A link to the *Register* page is provided if the user does not yet have an account.
 - Upon clicking the *Log In button* (provided fields are successfully filled out), the user will be brought to their profile with an alert to welcome them.
 
-#### Contact Page
+#### **Contact Page**
 - This page is accessible via a link in the footer "*Contact Us Here!*"
 - A contact form with fields for *Name*, *Email*, *Message* and a *Submit button* is provided, allowing the user to contact the site owners if they wish to do so.
 - Each of the fields has a label to ensure the user knows what information is required.
@@ -292,7 +292,7 @@ All features on the site have been put in place to make the user's experience as
 - The site owners will receive an email containing the user's information from the contact form.
 - The user will receive an automated email to the email address they provided confirming their message has been received.
 
-#### Profile Page
+#### **Profile Page**
 - This page is only accessible to registered users.
 - The user's name/username is provided along with a brief introduction to the profile.
 - Recipes that the user has created themselves can be found on their profile in the form of equal-sized card panels.
@@ -300,7 +300,7 @@ All features on the site have been put in place to make the user's experience as
 - Each panel has a clickable *View Recipe button* which, when clicked, will bring the user to that cocktails's own page. 
 - Each panel also has clickable icons for *Editing* and *Deleting* that cocktail which are visible beside the cocktail name.  
 
-#### Categories Page
+#### **Categories Page**
 - This page is only accessible to **admin**.
 - Contains equal-sized card panels with the name of each category.
 - Each panel has clickable icons for *Editing* and *Deleting* that category which are visible beside the category name.
@@ -321,7 +321,7 @@ All features on the site have been put in place to make the user's experience as
     - The *Delete* button successfully deletes the category and will return **admin** to the *Categories* page with an alert confirming the deletion.
     - The **modal** acts as a defensive feature to ensure **admin** cannot accidentally delete categories.
 
-#### Log Out
+#### **Log Out**
 - Clicking *Log Out* in the navbar triggers a **modal** to appear.
 - This modal asks the user if they are sure they wish to log out.
 - It has two buttons, *Cancel* and *Logout*.
@@ -329,27 +329,27 @@ All features on the site have been put in place to make the user's experience as
 - The *Logout* button successfully logs the user out with an alert confirming this.
 - The **modal** acts as a defensive feature to ensure the user doesn't accidentally log out.
 
-#### Navigation Bar
+#### **Navigation Bar**
 - The navigation bar at the top of the page exists on all site pages on every device, allowing users to easily navigate through the site and ensuring that there is no location within the site that they could not return from.
 - Contains a logo in the far left which contains the name of the website as well as acting as a link to the *Home* page.
 - Contains clear names of each site page (some pages dependent on who the current user is) so that the user knows what to expect from each page.
 - On smaller devices, this collapses to keep the screen uncluttered. The word "Menu" remains visible so that the user still knows that it is a navigation means.
 
-#### Footer
+#### **Footer**
 - Contains a link to the *Contact* page.
 - Contains four social media links for *Facebook, Instagram, Pinterest* and *YouTube* in the form of the appropriate icons. 
     - These icons change colour when hovered over to confirm to the user that they are links.
     - All four links open in a new tab so that the user does not lose their way back to the site.
     - All four links will only bring the user to the general social media platform rather than to a specific profile.
 
-### Features Left to Implement
-####  More Specific Recipe Categories
+### **Features Left to Implement**
+####  **More Specific Recipe Categories**
 - At a future date, if there are a large volume of cocktails from each category, separate pages could be created for each one, e.g. a whole page which purely held Non-Alcoholic recipes. These pages could be available as links in the navbar and available again as their own card-panels on the main *Recipes* page.
 
-#### Saving Recipes
+#### **Saving Recipes**
 - The ability for users to save recipes created by others to their profile. This would allow them to find it again easily rather than searching for it again.
 
-#### Comment on Recipes
+#### **Comment on Recipes**
 - The ability for users to leave comments on other recipes. This would create more of a community-feel to the site, allowing users to give feedback on recipes, whether they enjoyed it, tweaked it etc.
 
 ---
@@ -392,7 +392,7 @@ Testing information and content for this project can be found in the [separate T
 
 ---
 ## <p align="center">**Deployment**</p>
-### Creating the Project
+### **Creating the Project**
 This project used the Code Institute's student [template](https://github.com/Code-Institute-Org/gitpod-full-template). A new repository named **ms3-pickyourpoison**
 was created which included all branches from the template. The project was developed using the IDE [GitPod](https://www.gitpod.io/). Version control software [Git](https://git-scm.com/) was used to commit and push the code to 
 [GitHub](https://github.com/) where it was stored. The following commands were used for this:
@@ -400,13 +400,13 @@ was created which included all branches from the template. The project was devel
 - **git commit -m** *"message here"* - This command commits files/directories to the repository. Commit messages should clearly explain the update being committed.
 - **git push** - This command pushes all committed updates/changes into the GitHub repository.
 
-### Deploying to Heroku
+### **Deploying to Heroku**
 Heroku needs some files to be setup so that it knows what apps and dependencies are needed to run the app.
 -  use the command **"pip3 freeze --local > requirements.txt"**.
 - use the command **"echo web: python app.py > Procfile"** (ensuring you enter a capital P). 
 - Add, commit and push.
 
-#### Create Heroku App:
+#### **Create Heroku App:**
 - Create an account or login to [Heroku](https://www.heroku.com/).
 - Click on the *New* button on the top right of your dashboard.
 - Select **Create new app**.
@@ -414,13 +414,13 @@ Heroku needs some files to be setup so that it knows what apps and dependencies 
 - Choose your region.
 - Select **Create app**.
 
-#### Connect to GitHub Repository:
+#### **Connect to GitHub Repository:**
 - On your new app's page, navigate to the *Deploy* tab.
 - Under *Deployment method*, select **GitHub**.
 - Under *Connect to GitHub* (and making sure your GitHub profile is displayed), enter the name of your repository and click **Search**.
 - Once your repo has been found, click **Connect**.
 
-#### Set Environment Variables:
+#### **Set Environment Variables:**
 - Navigate to your app's *Settings* tab.
 - Under *Config Vars*, click **Reveal Config Vars**.
 - You'll need to **add** the following key:value items;
@@ -437,12 +437,12 @@ Heroku needs some files to be setup so that it knows what apps and dependencies 
         - custom and random sequence of characters required for maintaining security.
         - generated from [RandomKeygen](https://randomkeygen.com/) for example.
 
-#### Automatic Deployment:
+#### **Automatic Deployment:**
 - Navigate back to your app's *Deployment* tab.
 - Under *Automatic deploys*, select the branch you wish to deploy from.
 - Click **Enable Automatic Deploys**.
 
-### Deploying Locally
+### **Deploying Locally**
 
 
 ---
@@ -462,6 +462,5 @@ Heroku needs some files to be setup so that it knows what apps and dependencies 
 - [Stack Overflow](https://stackoverflow.com/) to ensure all cocktail card panels are the same height.
 - Code Institute's Task Manager App module was a useful resource for project setup.
  
-
 ### **Acknowledgements**
 - A big thank you to Scott and Kevin from Tutor Support who helped me solve an issue with Gitpod/GitHub which was preventing me from pushing code to GitHub.
