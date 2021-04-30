@@ -14,14 +14,14 @@
     - [Accessibility](#accessibility)
     - [Device Testing](#device-testing)
     - [Browser Testing](#browser-testing)
-    - [Known Bugs](#known-bugs)
+    - [Bugs](#bugs)
     - [Contact Form](#contact-form)
     - [CRUD](#crud)
     - [Testing User Stories](#testing-user-stories)
 
 ---
 ## <p align="center">**Testing**</p>
-### **Code Validation**
+## **Code Validation**
 - All HTML code was checked and validated with [ W3C Markup Checker](https://validator.w3.org/). 
     - On first check, I was alerted to a div that was missing a closing tag. 
     - I fixed this and ran it through again. No further errors reported.
@@ -37,18 +37,18 @@
     - On first check, I was alerted to an error **E125** for "continuation line with same indent as next logical line".
     - I fixed this in my app.py and checked the code again. No errors reported.
 
-### **Links Testing**
+## **Links Testing**
 - I manually tested every link contained within the site to ensure that they none were broken.
 - The four social media links in the footer correctly open in new tabs.
 - All internal links work and bring the user to the expected location within the site.
 - Every link correctly changes colour when hovered over, making it clear that it is a link.
 
-### **Navigation Testing**
+## **Navigation Testing**
 - I manually tested the site's navigation bar to ensure navigation ease on both full and collapsed menus. 
     - This was done by using [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) and by manually testing on physical devices.
 - The navigation menu correctly collapses on smaller devices while still being clear that it is a means of navigation.
 
-### **Accessibility**
+## **Accessibility**
 - I manually checked all images and icons on the site.
     - all images contain an alt attribute.
     - all icons contain a description for screen-reader users.
@@ -58,33 +58,43 @@
 
 - I noted that the contrast of some headings could be improved at a later date.
 
-### **Device Testing**
+## **Device Testing**
 I manually tested the site on several different devices to ensure that it was responsive and that everything still functioned as expected.
 - I also used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools), as mentioned previously, in order to view the site on a range of different screen dimensions.
 - I tested on my own devices and also reached out to some friends in order to get a wider range.
 - The following devices were tested on:
     - **Android Mobile**
         - Huawei: P10, P30 Lite, P30
-        - Samsung: Galaxy A40
+        - Samsung: Galaxy A40 and Galaxy A5.
         - No bugs or errors reported on these devices.
     - **Android Tablet**
         - Samsung: Galaxy Tab S7
         - No bugs or errors reported on this device.
     - **Apple Mobile**
         - iPhone: 6, 11 
+        - Site works well on these devices on Google Chrome but experiences layout issues on Safari; full details of which can be found [here](#bugs).
+- My testing on various devices (and also using DevTools) allowed me to note and fix some layout issues during development;
+    - Initially the links in the navigation bar were too big on larger screens, causing some overlapping.
+    - The cocktail recipe page was very spaced out on larger screens, giving too much blank screen real-estate.
+    - These issues were fixed using media queries.
 
-### **Browser Testing**
+## **Browser Testing**
 I manually tested the site on several different browsers to ensure that everything still functioned as expected.
 - The following browsers were used for manual testing on an Apple Macbook Pro:
     - **Google Chrome:** Site works well with no issues noted.
-    - **Safari:** 
+    - **Safari:** Site *functions* well but with layout issues. Details of which can be found [here](#bugs).
     - **Opera:** Site works well with no issues noted.
     - **Microsoft Edge:** Site works well with no issues noted.
 - The following browsers were used for manual testing on various mobile devices:
     - **Google Chrome:** Site works well with no issues noted.
-    - **Safari:** 
+    - **Safari:** Site *functions* well but with layout issues. Details of which can be found [here](#bugs).
 
-### **Contact Form**
+## **Bugs**
+- During the development process I encountered a bug where the user's entered cocktail image URL was not appearing in the card panel or recipe page.
+    - I did a lot of troubleshooting before realising that there was a simple naming error; whereby I had the wrong **name** and **id** on the URL's input field. 
+    - This bug was ***resolved***.
+
+## **Contact Form**
 I performed manual testing on the *Contact Form* on the site to ensure that it functioned as it should.
 - The following steps were followed for this testing procedure;
     - Navigate to the *Contact* page via the "Contact Us Here!" link contained in the footer on every page of the site.
@@ -106,7 +116,7 @@ I performed manual testing on the *Contact Form* on the site to ensure that it f
 
 - From this testing I concluded that the *Contact Form* is functional and performs its tasks correctly.
 
-### **CRUD**
+## **CRUD**
 For my testing I wanted to ensure that all registered users were able to Create, Read, Update and Delete cocktail recipes.
 - I manually tested this by logging in, navigating to the *New Recipe* page and creating a new cocktail recipe.
 - I navigated down my *Profile* page and found my new cocktail, "Hawaiian Iced Tea".
@@ -124,12 +134,19 @@ For my testing I wanted to ensure that all registered users were able to Create,
 
 
 I also wanted to ensure that the admin was able to Create, Read, Update and Delete categories.
-- I manually tested this by logging in as admin, creating a new category, viewing this category, editing this category and finally deleting this category. 
+- I manually tested this by logging in as admin and navigating to the *Categories* page.
+- I clicked the *Add Category* button which brought me to the *Add Category* page where I created a new category, "Rye".
+- I could now see "Rye" on the *Categories* page.
+- I clicked "Rye"'s *Edit* icon button which brought me to the *Edit Category* page where I changed "Rye" to "Frozen".
+- I could see "Frozen" had replaced "Rye* on the *Categories* page.
+- I then clicked the *Delete* icon button on the "Frozen* category and the modal popped up.
+- I confirmed the deletion by clicking the *Delete* button in the modal and returned to the *Categories* page to ensure the "Frozen" category was gone. 
+- Category had been deleted successfully.
 
 From the testing above I am satisfied that the site is functional in this regard. Further testing of the above are discussed below in User Stories.
 
-### **Testing User Stories**
-**All Users**
+## **Testing User Stories**
+### **All Users**
 
 - **"As a user, I want to easily navigate through the site."**
     - Regardless of what page the user is on, they can always find the navigation bar at the top of each page.
@@ -184,7 +201,6 @@ From the testing above I am satisfied that the site is functional in this regard
 
         - When clicked, the user is brought to the page for that particular recipe where they'll find further information about the recipe including *Ingredients* and *Steps*.
             - If the user is the creator of this recipe, they will also see icon buttons for *Edit* and *Delete* below the cocktail name.
-
          <p align="center"><img src="documentation/testing/recipe-pg.jpeg" width="70%" alt="Zombie Coctail Recipe Page"/></p>
 
         - The user can return to the previous *Recipes* page via a link on the top left of the page *"Back to All Recipes"*.
@@ -200,8 +216,7 @@ From the testing above I am satisfied that the site is functional in this regard
         - If there are no cocktails matching their search, the user will be alerted to this and encouraged to search for something else.
         <p align="center"><img src="documentation/testing/no-search.jpeg" width="60%" alt="No Results Found Alert"/></p>
 
-**First-Time User/Non Member**
-
+### **First-Time User/Non Member**
 - **"As a first-time user, I want to immediately understand the purpose of the site."**
     - Upon landing on the site the user can immediately find an introduction the the site below the hero image.
     - The hero image itself helps to set the tone of the site and contains the word *"Cocktail"* which further emphasises the site purpose.
@@ -236,8 +251,7 @@ From the testing above I am satisfied that the site is functional in this regard
         - The newly registered user will be alerted to their successful registration.
         <p align="center"><img src="documentation/testing/reg-alert1.jpg" width="60%" alt="Registration Complete Alert"/></p>
 
-**Registered Users**
-
+### **Registered Users**
 - **"As a registered user, I want to easily log in with my username and password."**
     - The user can click on *"Log In"* in the navigation bar to go directly to the *Log In* Page.
         - This is true on both full and collapsed menus.
@@ -334,8 +348,7 @@ From the testing above I am satisfied that the site is functional in this regard
         - Successful Logout
         - Contact Form Sent 
 
-**Admin User**
-
+### **Admin User**
 - **"As the admin, I want to be the only user who can add or edit cocktail categories."**
     - The admin can click on *Categories* in the navigation bar to go directly to the *Categories* page.
         - This link is only available and accessible to the admin.
