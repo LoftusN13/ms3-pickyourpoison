@@ -70,14 +70,15 @@ def login():
         # checks if password matches for that user
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    # alert user to successful login
-                    flash("Welcome, {}!".format(
-                        request.form.get("username")))
-                    # bring user to their profile after successful login
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+                        existing_user["password"], request.form.get(
+                            "password")):
+                session["user"] = request.form.get("username").lower()
+                # alert user to successful login
+                flash("Welcome, {}!".format(
+                    request.form.get("username")))
+                # bring user to their profile after successful login
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             # password does not match for that user
             else:
                 # alert user to unsuccessful login
