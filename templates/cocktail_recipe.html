@@ -12,11 +12,13 @@
                 <!-- only allow author of recipe to have the option to Edit and Delete it -->
                 {% if recipe.created_by == session["user"] %}
                     <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success">
-                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                        <span class="sr-only">Edit</span>
                     </a>
                     <!-- triggers modal to open when clicked to prevent accidental deletions -->
                     <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete_modal_{{recipe._id}}">
-                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <span class="sr-only">Delete</span>
                     </a>
                 {% endif %}
             </h2>
@@ -29,7 +31,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 cocktail-img">
                 <img src="{{ recipe.cocktail_image }}" class="card-img-top" alt="{{ recipe.cocktail_name }} Image">
-                <small><i class="fas fa-camera cam-icon"></i> Credits: {{ recipe.image_credit }}</small>
+                <small><i class="fas fa-camera cam-icon" aria-hidden="true"></i> Credits: {{ recipe.image_credit }}</small>
             </div>
             <div class="col-lg-6 recipe-ingredients">
                 <h3>Ingredients:</h3>
@@ -46,7 +48,7 @@
                 <h3>Steps:</h3>
                 {% for line in recipe.cocktail_steps.splitlines() %}
                     <ul>
-                        <li><i class="fas fa-cocktail"></i>{{ line }}</li>
+                        <li><i class="fas fa-cocktail" aria-hidden="true"></i>{{ line }}</li>
                     </ul>
                 {% endfor %}
             </div>

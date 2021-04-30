@@ -12,7 +12,7 @@
                 <form class="login-form" method="POST" action="{{ url_for('login') }}">
                     <!-- username field -->
                     <div class="mb-3">
-                        <i class="fas fa-user-circle"></i>
+                        <i class="fas fa-user-circle" aria-hidden="true"></i>
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" name="username" id="username"
                             minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" required>
@@ -20,7 +20,7 @@
 
                     <!-- password field -->
                     <div class="mb-3">
-                        <i class="fa fa-unlock-alt"></i>
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" id="password"
                             minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" required>

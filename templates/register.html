@@ -12,7 +12,7 @@
                 <form class="register-form" method="POST" action="{{ url_for('register') }}">
                     <!-- username field -->
                     <div class="mb-3">
-                        <i class="fas fa-user-plus"></i>
+                        <i class="fas fa-user-plus" aria-hidden="true"></i>
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" name="username" id="username" aria-describedby="username-help"
                             minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" required>
@@ -23,7 +23,7 @@
                     
                     <!-- password field -->
                     <div class="mb-3">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-lock" aria-hidden="true"></i>
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" id="password" aria-describedby="password-help"
                             minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" required>
