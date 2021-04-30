@@ -72,7 +72,6 @@ I manually tested the site on several different devices to ensure that it was re
         - No bugs or errors reported on this device.
     - **Apple Mobile**
         - iPhone: 6, 11 
-        - 
 
 ### **Browser Testing**
 I manually tested the site on several different browsers to ensure that everything still functioned as expected.
@@ -108,13 +107,26 @@ I performed manual testing on the *Contact Form* on the site to ensure that it f
 - From this testing I concluded that the *Contact Form* is functional and performs its tasks correctly.
 
 ### **CRUD**
-For my testing I wanted to ensure that all users were able to Create, Read, Update and Delete cocktail recipes.
-- I manually tested this by logging in as a registered user, creating a new recipe, viewing/reading this recipe, editing this recipe and finally deleting this recipe.
+For my testing I wanted to ensure that all registered users were able to Create, Read, Update and Delete cocktail recipes.
+- I manually tested this by logging in, navigating to the *New Recipe* page and creating a new cocktail recipe.
+- I navigated down my *Profile* page and found my new cocktail, "Hawaiian Iced Tea".
+- I clicked the *View Recipe* button and viewed the recipe to ensure all the details I had entered were present.
+<p align="center"><img src="documentation/testing/crud1.jpg" width="80%" alt="New Cocktail Recipe Form"/></p>
+
+- I then clicked the *Edit* icon button of the recipe and edited the details for every field in the *Edit Recipe Form*, changing "Hawaiian Iced Tea" into "Bay Breeze".
+<p align="center"><img src="documentation/testing/crud2.jpg" width="80%" alt="Edit Cocktail Recipe Form"/></p>
+
+- I returned to my profile to ensure that the recipe had been updated. "Hawaiian Iced Tea" was correctly updated to "Bay Breeze".
+- I then clicked the *Delete* icon button of the recipe and the modal popped up.
+- I confirmed the deletion by clicking the *Delete* button in the modal and returned to my profile to ensure the cocktail was gone. 
+- Cocktail had been deleted successfully.
+<p align="center"><img src="documentation/testing/crud3.jpg" width="80%" alt="Delete Cocktail Recipe"/></p>
+
 
 I also wanted to ensure that the admin was able to Create, Read, Update and Delete categories.
 - I manually tested this by logging in as admin, creating a new category, viewing this category, editing this category and finally deleting this category. 
 
-From this testing I am satisfied that the site is functional in this regard. For further testing of the above points please see User Stories below.
+From the testing above I am satisfied that the site is functional in this regard. Further testing of the above are discussed below in User Stories.
 
 ### **Testing User Stories**
 **All Users**
@@ -207,15 +219,22 @@ From this testing I am satisfied that the site is functional in this regard. For
         - This link is within a message stating "*Don't Have an Account?* **Register Here!**", which lets the user know where they can expect to be brought to.
         - This link changes size and colour when hovered over to further reinforce to the user that it is a clickable link.
 
-    <p align="center"><img src="documentation/testing/register.jpg" width="70%" alt="No Results Found Alert"/></p>
+    <p align="center"><img src="documentation/testing/register.jpg" width="70%" alt="Create Account Links"/></p>
 
     - On the *Register* page the user will find a Registration form to be filled out;
         - This form allows the user to choose a *Username* and *Password*.
         - Descriptions under each form field tell the user what characters are accepted to keep things clear and simple.
+        <p align="center"><img src="documentation/testing/reg-form1.jpg" width="70%" alt="Register Form"/></p>
+
         - The user will be alerted if they try to submit the form but their chosen username has already been taken by another user.
+        <p align="center"><img src="documentation/testing/reg-alert.jpg" width="60%" alt="Username Taken Alert"/></p>
+
         - The user will be alerted if they try to submit the form with either field empty or filled out incorrectly.
+        <p align="center"><img src="documentation/testing/reg-form.jpg" width="60%" alt="Register Form Errors"/></p>
+
         - Upon successful registration, the newly registered user will be brought directly to their new profile.
         - The newly registered user will be alerted to their successful registration.
+        <p align="center"><img src="documentation/testing/reg-alert1.jpg" width="60%" alt="Registration Complete Alert"/></p>
 
 **Registered Users**
 
@@ -225,12 +244,17 @@ From this testing I am satisfied that the site is functional in this regard. For
     - The user can click on a link located near the bottom of the *Register* page to go directly to the *Log In* page.
         - This link is within a message stating "*Already Registered?* **Log In Here!**", which lets the user know where they can expect to be brought to.
         - This link changes size and colour when hovered over to further reinforce to the user that it is a clickable link.
+    <p align="center"><img src="documentation/testing/login.jpg" width="60%" alt="Incorrect Username/Password Alert"/></p>
+
     - On the *Log In* page the user will find a form to be filled out;
         - This form allows the user to enter their *Username* and *Password*.
         - The user will be alerted if they try to submit the form with an empty field.
         - The user will be alerted if the *Username* and/or *Password* are entered incorrectly.
+        <p align="center"><img src="documentation/testing/login-error.jpeg" width="60%" alt="Incorrect Username/Password Alert"/></p>
+
         - Upon successful login, the user will be brought directly to their profile.
-        - The user will be alerted to their successful login. 
+        - The user will be alerted to their successful login.
+        <p align="center"><img src="documentation/testing/login-msg.jpeg" width="60%" alt="Incorrect Username/Password Alert"/></p>
 
 - **"As a registered user, I want to easily create my own cocktail recipes."**
     - The user can click on *New Recipe* in the navigation bar to go directly to the *New Cocktail Recipe* Page.
@@ -243,31 +267,47 @@ From this testing I am satisfied that the site is functional in this regard. For
         - Cocktail Image URL
         - Cocktail Image Credit
     - The user will be alerted if they try to submit the form with any field empty.
+    <p align="center"><img src="documentation/testing/new.jpg" width="60%" alt="New Cocktail Form Errors"/></p>
+
     - The fields for *Ingredients, Steps* and *Cocktail Image Credit* have labels underneath so that the user understands what exactly is required.
     - Upon successful creation of the recipe the user will be brought to the *Recipes* page.
     - The user will be alerted to the successful recipe creation. 
+    <p align="center"><img src="documentation/testing/new-alert.jpg" width="60%" alt="New Cocktail Form Errors"/></p>
+
     - The user can click the *Cancel* button if they do not wish to add the recipe and this will bring them back to the *Recipes* page.
+
+    - The user can find their new recipe on the *Recipes* page and on their *Profile* page.
+    <p align="center"><img src="documentation/testing/new-recipe.jpg" width="60%" alt="New Cocktail Form Errors"/></p>
 
 - **"As a registered user, I want to easily edit or delete my own cocktail recipes."**
    - The user can click on the *Edit* icon button of any of their own recipes to go directly to the *Edit Cocktail Recipe* Page.
         - This button is accessible beneath the Cocktail Name on the recipe card panels found on the *Recipes* page, the user's *Profile* page and on each cocktails own recipe page.
     - On the *Edit Cocktail Recipe* page the user will find a form that is pre-filled with the recipe's current values.
-        - The user will be alerted if they try to submit the form with any field empty.
+    <p align="center"><img src="documentation/testing/edit.jpg" width="70%" alt="Edit Cocktail Form"/></p>
+
+    - The user will be alerted if they try to submit the form with any field empty.
         - Upon a successful edit of the recipe the user will be brought to the *Recipes* page.
         - The user will be alerted to the successful recipe edit. 
+        <p align="center"><img src="documentation/testing/edit-alert.jpeg" width="70%" alt="Edit Cocktail Alert"/></p>
+
         - The user can click the *Cancel* button if they do not wish to edit the recipe and this will bring them back to the *Recipes* page.
     - The user can click on the *Delete* icon button of any of their own recipes to activate a *delete modal*.
         - This button is accessible beneath the Cocktail Name on the recipe card panels found on the *Recipes* page, the user's *Profile* page and on each cocktails own recipe page.
         - The *modal* acts as a defence to prevent the user from accidentally deleting their recipes.
         - The *modal* will ask the user if they are sure they wish to delete their recipe.
+        <p align="center"><img src="documentation/testing/del-recipe.jpeg" width="70%" alt="Delete Recipe Modal"/></p>
+
         - The user can click the *Cancel* button which will close the modal and **not** delete the recipe.
         - The user can click the *Delete* button which will successfully delete the recipe.
         - The user will be alerted to a successful deletion and will be brought to the *Recipes* page.
+        <p align="center"><img src="documentation/testing/del-recipe1.jpeg" width="70%" alt="Delete Recipe Modal"/></p>
 
 - **"As a registered user, I want to easily view my profile"**
     - The user can click on *Profile* in the navigation bar to go directly to their profile.
         - This is true on both full and collapsed menus.
-    - The user will see all cocktails that they have created seeing each recipe in its own panel. 
+    - The user will see all cocktails that they have created, seeing each recipe in its own panel.
+    <p align="center"><img src="documentation/testing/profile.jpeg" width="70%" alt="User's Profile Page"/></p>
+
     - The user will see icon buttons for *Edit* and *Delete* below the cocktail name in the panel.
 
 - **"As a registered user, I want to easily log out from my account."**
@@ -275,12 +315,17 @@ From this testing I am satisfied that the site is functional in this regard. For
         - This is true on both full and collapsed menus.
         - The modal acts as a defence to prevent the user from accidentally logging out.
     - The *modal* will ask the user if they are sure they wish to log out.
+    <p align="center"><img src="documentation/testing/logout-modal.jpg" width="70%" alt="Logout Modal"/></p>
+
     - The user can click the *Cancel* button which will close the modal and keep the user logged in.
     - The user can click the *Logout* button which will successfully log the user out of their account.
     - The user will be alerted to a successful logout and will be brought to the *Log In* page.
+    <p align="center"><img src="documentation/testing/logout-alert.jpg" width="70%" alt="Logout Modal"/></p>
 
 - **"As a registered user, I want visual confirmation of any task performed."**
     - The user is given visual confirmation of any tasks they perform via message alerts which appear beneath the navigation bar at the top of the page.
+    <p align="center"><img src="documentation/testing/alerts.jpg" width="70%" alt="User Alerts"/></p>
+
     - This includes confirmation of the following;
         - Successful Log In
         - New Recipe Created
@@ -294,12 +339,16 @@ From this testing I am satisfied that the site is functional in this regard. For
 - **"As the admin, I want to be the only user who can add or edit cocktail categories."**
     - The admin can click on *Categories* in the navigation bar to go directly to the *Categories* page.
         - This link is only available and accessible to the admin.
+    <p align="center"><img src="documentation/testing/category.jpg" width="70%" alt="Categories Page"/></p>
+
     - The admin will find an *Add Category* button which changes colour when hovered over to emphasise to the admin that it is a clickable link.
         - When clicked, the admin will be brought to the *Add Category* page.
         - On this page, the admin will find a small form with just one field for *Category Name* and two buttons, *Cancel* and *Add Category*.
         - The admin will be alerted if they try to submit the form with the field empty.
         - Upon successful submission of the form, the admin will be returned to the *Categories* page.
         - The admin will be alerted to the successful addition.
+        <p align="center"><img src="documentation/testing/add-cat.jpg" width="60%" alt="Add Category Page"/></p>
+
         - The admin can click the *Cancel* button if they do not wish to add the category and this will bring them back to the *Categories* page.
     - On the *Categories* page the admin will find all categories that have been added to the site. 
         - Each category is within its own panel with icon buttons for *Edit* and *Delete* beside each category name.
@@ -308,11 +357,15 @@ From this testing I am satisfied that the site is functional in this regard. For
         - The admin will be alerted if they try to submit the form with any field empty.
         - Upon a successful edit of the category the admin will be brought to the *Categories* page.
         - The admin will be alerted to the successful category edit. 
+        <p align="center"><img src="documentation/testing/edit-cat.jpg" width="60%" alt="Edit Category Page"/></p>
+
         - The admin can click the *Cancel* button if they do not wish to edit the category and this will bring them back to the *Categories* page.
     - The user can click on the *Delete* icon button of any of the categories to activate a *delete modal*.
         - The *modal* acts as a defence to prevent the admin from accidentally deleting the category.
         - The *modal* will ask the admin if they are sure they wish to delete the category.
         - The admin can click the *Cancel* button which will close the modal and **not** delete the category.
         - The admin can click the *Delete* button which will successfully delete the category.
+        <p align="center"><img src="documentation/testing/del-cat.jpg" width="60%" alt="Delete Category"/></p>
+
         - The admin will be alerted to a successful deletion and will be brought to the *Categories* page.
 
