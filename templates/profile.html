@@ -25,8 +25,8 @@
             <!-- only displays recipes created by current user -->
             {% if recipe.created_by == session["user"] %}
                 <div class="col-md-4 mb-3">
-                    <div class="card cocktail-card h-100">
-                        <img src="{{ recipe.cocktail_image }}" class="card-img-top h-100" alt="{{ recipe.cocktail_name }} Image">
+                    <div class="card cocktail-card">
+                        <img src="{{ recipe.cocktail_image }}" class="card-img-top" alt="{{ recipe.cocktail_name }} Image">
                         <div class="card-body">
                             <h5 class="card-title">{{ recipe.cocktail_name }} <br>
                                 <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn btn-success btn-sm">
