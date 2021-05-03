@@ -66,6 +66,7 @@ I manually tested the site on several different devices to ensure that it was re
     - **Android Mobile**
         - Huawei: P10, P30 Lite, P30
         - Samsung: Galaxy A40 and Galaxy A5.
+        - OnePlus: Nord
         - No bugs or errors reported on these devices.
     - **Android Tablet**
         - Samsung: Galaxy Tab S7
@@ -93,6 +94,18 @@ I manually tested the site on several different browsers to ensure that everythi
 - During the development process I encountered a bug where the user's entered cocktail image URL was not appearing in the card panel or recipe page.
     - I did a lot of troubleshooting before realising that there was a simple naming error; whereby I had the wrong **name** and **id** on the URL's input field. 
     - This bug was ***resolved***.
+
+- On the **Safari** browser, the cocktail card panels have layout issues; their images are stretched causing the *View Recipe* button to be either out of place or completely unaccessible as seen in the below images.
+    <p align="center"><img src="documentation/testing/safari.jpg" width="80%" alt="Safari Browser Layout Issue"/></p>
+
+    - From searching online and inspecting elements in the **Safari** browser, I discovered that the issue was Bootstrap's *h-100* class that had been applied to the card and card image for equal heights.
+        - **Safari** is the only browser that had this issue, as the class worked perfectly in all other tested browsers.
+    - I removed the class which solved the stretched-out image issue in **Safari**, but this also meant that all cards became unequal in height once more.
+    - I went back online searching for a possible solution and came across this code snippet [here](https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width/47698201#47698201).
+        - I used this general idea to control the size of the card images, setting the height for mobile and then scaling up for larger devices using a media query.
+        - When viewed on all browsers, including **Safari** this worked across them all, ensuring all card images were the same height.
+     - This bug was ***resolved***.
+
 
 ## **Contact Form**
 I performed manual testing on the *Contact Form* on the site to ensure that it functioned as it should.
@@ -275,7 +288,7 @@ From the testing above I am satisfied that the site is functional in this regard
         - This is true on both full and collapsed menus.
     - On the *New Cocktail Recipe* page the user will find a form to be filled out with fields for;
         - Cocktail Name
-        - Choose Main Alcohol (dropdown select meny)
+        - Choose Main Alcohol (dropdown select menu)
         - Ingredients
         - Steps
         - Cocktail Image URL

@@ -342,6 +342,15 @@ All features on the site have been put in place to make the user's experience as
     - All four links open in a new tab so that the user does not lose their way back to the site.
     - All four links will only bring the user to the general social media platform rather than to a specific profile.
 
+#### **Scroll to Top Button**
+- The scroll-to-top button was a later addition added to the *Recipes* page following some testing.
+- This feature was implemented to improve user experience.
+    - The more cocktails that are added to the site, the more the user needs to scroll and scroll with no easy way of returning to the top of the page.
+    - This button gives them an easy and quick way of returning to the top.
+- The button is hidden and only appears in the bottom right of the screen once the user has begun to scroll.
+- It changes colour when hovered over to emphasise that it is clickable.
+- When clicked it returns the user to the top of the page.
+
 ### **Features Left to Implement**
 ####  **More Specific Recipe Categories**
 - At a future date, if there are a large volume of cocktails from each category, separate pages could be created for each one, e.g. a whole page which purely held Non-Alcoholic recipes. These pages could be available as links in the navbar and available again as their own card-panels on the main *Recipes* page.
@@ -443,7 +452,19 @@ Heroku needs some files to be setup so that it knows what apps and dependencies 
 - Click **Enable Automatic Deploys**.
 
 ### **Deploying Locally**
+**Please note** that the project will not run locally without a new **env.py** python file being created which contains the following with their corresponding values: IP, PORT, MONGO_DBNAME, MONGO_URI, SECRET_KEY. For security reasons, these details are not included in this repository.
 
+In order to make a clone, follow these steps:
+- Log into GitHub.
+- Navigate to the **Repositories** tab.
+- Choose the desired repository.
+- Above the list of files, click on the **Code** drop-down menu.
+- Copy the clone URL under the **HTTPS** tab.
+- Open a terminal window in your IDE of choice.
+- Change the working directory to whichever location you want the cloned directory to be in.
+- Type *git clone* and then paste the URL that you copied earlier.
+- Press enter to create the clone.
+- In your IDE of choice, type *pip install -r requirements.txt* in order to install all required packages for project.
 
 ---
 ## <p align="center">**Credits**</p>
@@ -459,8 +480,12 @@ Heroku needs some files to be setup so that it knows what apps and dependencies 
 
 ### **Code**
 - Code Institute's EmailJS module was used to help set up the contact form submission.
-- [Stack Overflow](https://stackoverflow.com/) to ensure all cocktail card panels are the same height.
 - Code Institute's Task Manager App module was a useful resource for project setup.
+- Code to make cocktail card images equal heights across browsers taken and adapted from [Stack Overflow](https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width/47698201#47698201).
+- Code for '*scroll to top button*', function and implementation taken and adapted from [w3schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp).
  
 ### **Acknowledgements**
+- My friends and family who viewed the site on their own devices and provided valuable feedback.
+- My mentor, Spencer Barriball for his helpful advice on this project.
+- The Slack community for feedback they provided.
 - A big thank you to Scott and Kevin from Tutor Support who helped me solve an issue with Gitpod/GitHub which was preventing me from pushing code to GitHub.
