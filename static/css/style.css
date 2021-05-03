@@ -66,6 +66,21 @@ h5 {
 }
 
 /*-------------------------Buttons----------------------- */
+#scroll-btn {
+    display: none;
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1rem;
+    z-index: 99;
+    background-color: #FF6B6B;
+    color: #F5F4F6;
+    text-shadow: .06rem .06rem .1rem #08060E;
+    
+}
+#scroll-btn:hover {
+    background-color: #861388;
+}
+
 .search-btns {
     padding-top: .5rem;
 }

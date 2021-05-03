@@ -1,3 +1,4 @@
+/* EmailJS funtion on contact form submission */
 function sendEmail(contactForm){
     emailjs.send("gmail", "pick-your-poison",{
         "from_name": contactForm.fullname.value,
@@ -19,4 +20,29 @@ function sendEmail(contactForm){
 
     document.getElementById("contactForm").reset();
     return false;
+}
+
+/* Scroll to top of page button function,
+target the scroll button, trigger button to appear
+when user starts scrolling down, when clicked it
+returns user to top of page */
+let scrollButton = document.getElementById("scroll-btn")
+
+window.onscroll = function() {
+    scrollFunction();
+}
+
+/* display button once user has started scrolling */
+function scrollFunction() {
+    if (document.body.scrollTop > 140  || document.documentElement.scrollTop > 140) {
+        scrollButton.style.display = "block";
+    }
+    else {
+        scrollButton.style.display = "none";
+    }
+}
+/* bring user to top of bage when button is clicked */
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
