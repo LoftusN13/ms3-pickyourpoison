@@ -229,6 +229,11 @@ h5 {
     text-align: center;
     padding: 1rem .5rem;
 }
+.cocktail-card-panels img{
+    width: 100%;
+    height: 55vw;
+    object-fit: cover;
+}
 
 .cocktail-card-panels i:hover {
     font-size: 1rem;
@@ -434,6 +439,14 @@ h5 {
     .cocktail-recipe {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .cocktail-card-panels img{
+        width: 100%;
+        height: 25vw;
+        object-fit: cover;
     }
 }
 
